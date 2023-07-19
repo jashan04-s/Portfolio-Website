@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+:root{
+    --font-family: "Abel", sans-serif;
+    --logo-font: "Rubik",sans-serif;
+
+    --linear-bg: linear-gradient(90deg, rgba(190, 7, 181, 1) 0%, rgba(44, 19, 56, 1) 100%);
+    
+    --primary-color: #2C1338;
+    --secondary-color: #ffffff;
+    --accent-color: #FFDE91;
+    --background-color: #280026;
+}

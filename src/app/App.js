@@ -1,13 +1,20 @@
 import React from 'react' ;
 import {Hero, Navbar} from "./components";
 
+import "./App.css"
+
+
+
 const App = () => {
+  
+  
+  
   return (
-    <div>
-      <h1> Hello </h1>
-      <Navbar/>
-      <Hero/>
+
+    <div className =  "App">
+      <Navbar/> 
     </div>
+    
   )
 }
 
