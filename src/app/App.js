@@ -13,6 +13,7 @@ const App = () => {
 
     <div className =  "App">
       <Navbar/> 
+      <Hero/>
     </div>
     
   )

@@ -1,0 +1,17 @@
+.hero{
+    color: var(--text-color);
+    background: var(--background-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero--font{
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.hero__body{
+    font-size: 32px;
+    font-family: var(--logo-font);  
+}
+

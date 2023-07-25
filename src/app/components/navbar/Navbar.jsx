@@ -10,8 +10,10 @@ const Navbar = () => {
 
   return (
         <div className = "navbar navbar--background navbar--font">
-          <div className = "navbar__left navbar__left--font"> G J </div>
+          <div className = "navbar__left navbar__left--font"> jashan. </div>
           <div className= "navbar__right"> 
+            
+            
             { isMenuOpen ?
             <div className = "navbar__menu" onMouseLeave = {() => setMenuState(false)}>
               <div className = "nav__listItem"><a href = ""> About </a></div>
@@ -23,6 +25,7 @@ const Navbar = () => {
           :
             <FiAlignRight size = "50px" className = "react-icon" onMouseEnter = { () => setMenuState(true)}/>   
             }
+
           </div>
           
         </div>
