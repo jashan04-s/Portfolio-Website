@@ -5,19 +5,16 @@ import blob from "../../../assets/blob.svg";
 
 const Hero = () => {
   return (
-    <div className  = "hero hero--font">
-      <div className = "hero__text">
-        <div className = "hero__intro">
-          Welcome to my creative corner!
-        </div>
-        <div className = "hero__body">
-          I'm Gurjashan, a passionate software developer crafting immersive experiences that resonate and inspire. 
-        </div>
-        </div>
-      <div className = "hero__image">
-        <img src = {blob} className = "hero__blob" width = "500px"></img>
+    <div className="hero hero--font hero--positioner">
+      <div className = "hero__header">
+        Hi there! I'm Gurjashan.
       </div>
+      <div className = "hero__text">
+       a passionate software developer crafting immersive experiences that resonate and inspire.
+      </div>
+      
     </div>
+
   )
 }
 

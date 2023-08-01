@@ -1,17 +1,37 @@
+
+
 .hero{
-    color: var(--text-color);
-    background: var(--background-color);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    color: white;
+    background: rgb(68,68,68);
+    background: radial-gradient(circle, rgba(68,68,68,1) 0%, rgba(0,0,0,1) 47%);
+    height: 80vh;
+    position: relative;
 }
 
 .hero--font{
     font-weight: bolder;
-    font-size: 24px;
+    font-size: 4rem;
 }
 
-.hero__body{
-    font-size: 32px;
-    font-family: var(--logo-font);  
+.hero--positioner{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-inline: 15%;
+    
 }
+
+.hero__header{
+    z-index: 2;
+}
+
+.hero__text{
+    font-size: 32px;
+    font-family: var(--logo-font); 
+    color: violet; 
+    z-index: 2;
+}
+
 

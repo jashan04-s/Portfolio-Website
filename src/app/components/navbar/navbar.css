@@ -6,18 +6,17 @@
 }
 
 .navbar--background{
-    background: white;
-    border: 5px solid black;
+    background: black;
 }
 
 .navbar--font{
-    color: var(--text-color);
+    color: white;
     font-size: 24px;
     font-weight: 600;
 }
 
 .navbar__left--font{
-    color: var(--text-color);
+    color: black;
     font: var(--logo-font);
     text-decoration: underline;
     font-size: 40px;
@@ -32,13 +31,19 @@
     display: flex;
     justify-content: right;
     align-items: center;
+    flex-basis: 80%;
 }
 
 .navbar__left{
     display: flex;
     align-items: center;
+    background-color: violet;
+    border-radius: 10px;
+    margin: 1%;
 }
 
 .nav__listItem{
     padding: 0.5rem 1.5rem;
 }
+
+

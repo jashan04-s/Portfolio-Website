@@ -4,10 +4,10 @@
     --font-family: "Abel", sans-serif;
     --logo-font: "Rubik",sans-serif;
 
-    --linear-bg: ;
+    --linear-bg: linear-gradient(90deg, rgba(2, 0, 7, 1) 30%, rgba(159, 102, 205, 1) 100%);;
     
     --primary-color: #FFDE91;
     --secondary-color: #000000;
     --text-color: #000000;
-    --background-color: #FFDE91;
+    --background-color: violet;
 }
