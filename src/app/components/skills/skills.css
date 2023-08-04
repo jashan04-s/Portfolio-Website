@@ -1,7 +1,7 @@
 .skills__container{
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 2rem;
     
 }
 .skills{
@@ -9,18 +9,17 @@
     border-radius: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2%;
+    
+    grid-gap: 1rem;
 }
 
 .skills--font{
     font-family: var(--text-font);
-    font-size: 2rem;
+    font-size: 3rem;
     
 }
 
 .skills > * {
-    
-    padding-top: 2%;
     padding-left: 1.5rem;
 }
 
@@ -68,6 +67,16 @@
     margin-top: 7.5%;
 }
 
+.skill__header__text--font{
+    color: var(--text-color);
+    font-family: var(--text-font);
+    font-size: 1.25rem;
+}
+
+.skill__header__text{
+    text-align: center;
+    margin-top: 1rem;
+}
 
 
 .frontend__icons, .backend__icons, .other__icons, .tools__icons{
@@ -78,4 +87,13 @@
 .frontend__icons > * , .backend__icons > *, .other__icons > *, .tools__icons > * {
     flex: 1;
     object-fit: none;
+}
+
+.icons{
+    font-size: 1.5rem;
+}
+
+.icons > div{
+    display: flex;
+    justify-content: center;
 }
