@@ -1,5 +1,5 @@
 import React from 'react' ;
-import {Hero, Navbar} from "./components";
+import {Hero, Navbar, Skills} from "./components";
 
 import "./App.css"
 
@@ -14,6 +14,7 @@ const App = () => {
     <div className =  "App">
       <Navbar/> 
       <Hero/>
+      <Skills/>
     </div>
     
   )

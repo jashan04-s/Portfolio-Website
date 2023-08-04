@@ -1,7 +1,6 @@
 import React from 'react' ;
 import "./navbar.css" ;
-import {FiAlignRight} from "react-icons/fi";
-import {IoClose} from "react-icons/io5";
+import star from "../../../assets/navbarstar.png"
 
 const Navbar = () => {
 
@@ -9,23 +8,21 @@ const Navbar = () => {
 
 
   return (
-        <div className = "navbar navbar--background navbar--font">
+        <div className = "navbar navbar--background">
           <div className = "navbar__left navbar__left--font"> jashan. </div>
-          <div className= "navbar__right"> 
-            
-            
-            { isMenuOpen ?
-            <div className = "navbar__menu" onMouseLeave = {() => setMenuState(false)}>
-              <div className = "nav__listItem"><a href = ""> About </a></div>
-              <div className = "nav__listItem"><a href = ""> Experience </a></div>
-              <div className = "nav__listItem"><a href = ""> Work </a></div>
-              <div className = "nav__listItem"><a href = ""> Contact </a></div>
-              <IoClose size = "50px" className = "react-icon"/>
+          <div className= "navbar__right navbar__right--font">
+            <div className = "navbar__home"> 
+             <img src = {star} className = "navbar__icon"/> Home
+            </div> 
+            <div className = "navbar__skills"> 
+             <img src = {star} className = "navbar__icon"/> Skills
+            </div> 
+            <div className = "navbar__portfolio"> 
+             <img src = {star} className = "navbar__icon"/> Projects
             </div>
-          :
-            <FiAlignRight size = "50px" className = "react-icon" onMouseEnter = { () => setMenuState(true)}/>   
-            }
-
+            <div className = "navbar__contact"> 
+              Contact Me
+            </div>
           </div>
           
         </div>
