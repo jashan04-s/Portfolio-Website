@@ -1,0 +1,31 @@
+.projects__header{
+    display: flex;
+    justify-content: center;
+    margin-top: 7.5%;
+}
+
+.projects__header--font{
+    font-size: 3rem;
+    font-family: var(--text-font);
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+
+.projects__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    margin-top: 3rem;
+}
+
+.projects__grid > *{
+    height: 400px;
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+    margin-inline: 5%;
+}
+
+.grid__two{
+    background-color: #17111D;
+}

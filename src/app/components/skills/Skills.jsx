@@ -50,7 +50,7 @@ const Skills = () => {
                             </div>
                             <div className = "icons">
                                 <div><img src = {icons["nextjsicon.png"]}/></div>
-                                <div> Nextjs</div>
+                                <div> NextJS</div>
                             </div>
                         </div>
                     </div>

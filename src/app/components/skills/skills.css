@@ -82,6 +82,7 @@
 .frontend__icons, .backend__icons, .other__icons, .tools__icons{
     display: flex;
     align-items: center;
+    margin: 1rem 0;
 }
 
 .frontend__icons > * , .backend__icons > *, .other__icons > *, .tools__icons > * {
