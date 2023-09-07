@@ -69,12 +69,13 @@
     transition: var(--icon-hover-transition);
 }
 
-.navbar__icon:hover{
-    transform: rotate(360deg);
-}
+
 
 .navbar__right > *:hover{
     font-size: 2rem ;
+    .navbar__icon{
+        transform: rotate(210deg) scale(1.25);
+    }
 }
 
 
