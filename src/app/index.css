@@ -12,5 +12,9 @@
     --accent-color: #7949a7;
     --background-color: #000000;
 
+    --project-grid-primary-color: #040205;
+    --project-grid-secondary-color: #17111D;
+
     --hover-transition: all 0.1s ease-out 0.05s;
+    --icon-hover-transition: transform 0.7s ease-in-out;
 }

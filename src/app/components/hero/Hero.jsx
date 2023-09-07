@@ -13,7 +13,7 @@ const Hero = () => {
   
 
   return (
-    <div className = "hero">
+    <div className = "hero" id = "home">
       <div className = "hero__content">
         <div className = "hero__header hero__header--font">
           Hi, I'm <span className = "header__emphasis"> Gurjashan.</span>

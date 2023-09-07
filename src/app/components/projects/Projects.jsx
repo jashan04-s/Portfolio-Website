@@ -1,6 +1,9 @@
 import React from 'react';
 import "./projects.css" ;
 
+import GoogleMapsClone from "../../../assets/projectimages/googlemapsclone.png";
+import Kraya from "../../../assets/projectimages/kraya.png";
+import PortfolioWebsite from "../../../assets/projectimages/portfoliowebsite.png";
 
 const Projects = () => {
 
@@ -10,9 +13,15 @@ const Projects = () => {
                 Projects
             </div>
             <div className = "projects__grid">
-                <div className = "grid__one"> a </div>
-                <div className = "grid__two"> b </div>
-                <div className = "grid__three"> c </div>
+                <div className = "grid__one"> 
+                    <img src = {Kraya} />
+                </div>
+                <div className = "grid__two"> 
+                    <img src = {PortfolioWebsite} />
+                </div>
+                <div className = "grid__three"> 
+                    <img src = {GoogleMapsClone} /> 
+                </div>
             </div>
         </div>
     )

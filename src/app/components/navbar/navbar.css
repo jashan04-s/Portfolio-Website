@@ -5,7 +5,8 @@
     position: fixed;
     width: 100%;
     top: 0;
-    padding-top: 1.5%;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
 }
 
 .navbar > * {
@@ -62,6 +63,14 @@
 
 .navbar__right > * {
     transition: var(--hover-transition);
+}
+
+.navbar__icon{
+    transition: var(--icon-hover-transition);
+}
+
+.navbar__icon:hover{
+    transform: rotate(360deg);
 }
 
 .navbar__right > *:hover{

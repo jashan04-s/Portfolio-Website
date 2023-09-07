@@ -11,9 +11,9 @@ const Navbar = () => {
         <div className = "navbar navbar--background">
           <div className = "navbar__left navbar__left--font"> jashan. </div>
           <div className= "navbar__right navbar__right--font">
-            <div className = "navbar__home"> 
+            <a href = "#home" className = "navbar__home"> 
              <img src = {star} className = "navbar__icon"/> Home
-            </div> 
+            </a> 
             <div className = "navbar__skills"> 
              <img src = {star} className = "navbar__icon"/> Skills
             </div> 

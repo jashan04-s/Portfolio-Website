@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
-    grid-gap: 1rem;
+    grid-gap: 1.5rem;
 }
 
 .skills--font{
@@ -54,7 +54,7 @@
 
 
 .skill__header--font{
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: var(--text-font);
     color: var(--text-color);
     text-decoration: underline;
