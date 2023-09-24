@@ -19,8 +19,8 @@
 
 .hero{
     display: flex;
-    padding-top: 10rem;
-    margin-inline: 4rem;
+    padding-top: 3rem;
+    margin-left: 4rem;
 }
 
 .hero__text{
