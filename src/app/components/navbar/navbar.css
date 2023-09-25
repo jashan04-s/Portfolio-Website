@@ -31,20 +31,24 @@
 }
 
 .navbar__right{
-    position: absolute;
+    position: fixed;
     right: 0px;
     z-index: 1000;
     width: 60%;
-    justify-content: right;
-    display: flex;
-    align-items: center;
     background-color: rgba(255,255,255,0.05);
     padding-inline: 2.5%;
     padding-block: 0.5%;
     font-family: var(--text-font);
 }
 
-.navbar__right > *{
+.navbar__right-links{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.navbar__right-links > *{
     flex: 1
 }
 
@@ -65,7 +69,7 @@
     display: flex;
     flex: 1;
     margin-left: 3%;
-    align-content: center;
+    align-items: center;
 }
 
 .navbar__contact{
@@ -80,24 +84,44 @@
     display: none;
 }
 
+/* Adding a hamburger icon for tablet screens or lower*/
 
-@media screen and (max-width: 950px){
-    .navbar__link{
+@media only screen and (max-width: 950px){
+    
+
+    .navbar__right-links{
         display: none;
     }
 
-    .navbar__contact{
-        display: none;
+    .navbar__link__caption, .navbar__contact{
+        margin-block: 5%;
     }
+
 
     .navbar__menu{
         display: block;
     }
 
+    .navbar__mobile-links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .navbar__close_icon{
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .navbar__hamburger_icon{
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+    }
+
+    .navbar__right{
+        background-color: var(--background-color);
+        border-radius: 20px;
+        width: 30%;
     }
 
   
@@ -105,7 +129,7 @@
 
 
 
-.navbar__right > * {
+.navbar__right-links > * {
     transition: var(--hover-transition);
 }
 
@@ -113,7 +137,7 @@
     transition: var(--icon-hover-transition);
 }
 
-.navbar__right > *:hover{
+.navbar__right-links > *:hover{
     font-size: 2rem ;
     .navbar__icon{
         transform: rotate(215deg) scale(1.25);

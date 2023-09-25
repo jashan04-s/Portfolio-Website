@@ -38,19 +38,25 @@ const Navbar = () => {
         <div className = "navbar navbar--background">
           <div className = "navbar__left navbar__left--font"> jashan. </div>
           <div className= "navbar__right navbar__right--font">
-          
-            <Menu/>
+            <div className = "navbar__right-links">
+              <Menu className = "navbar__right__menu"/>
+            </div>
+
+
             {isMenuOpen ? 
             <div className = "navbar__menu">
-            <div className = "navbar__hamburger_icon" onClick = {() => setMenuState(false)}>
-              <RxCross2 size = {56}/>
+            <div className = "navbar__mobile-links" onClick = {() => setMenuState(false)}>
+              <div className = "navbar__close_icon"> <RxCross2 size = {56}/> </div>
+                <Menu/>
+              </div>
             </div>
-          </div>
               : 
             <div className = "navbar__hamburger_icon" onClick = {() => setMenuState(true)}>
               <RxHamburgerMenu size = {56}/>
             </div>
             }
+
+
           </div>
         </div>
 
