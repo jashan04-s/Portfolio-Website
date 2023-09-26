@@ -27,6 +27,10 @@ module.exports = {
                 type: "asset/resource",
             },
             {
+                test: /\.(pdf)$/,
+                use: 'file-loader?name=[path][name].[ext]',
+            },
+            {
                 test: /\.css$/,
                 use: ["style-loader","css-loader"],
                 exclude: /node_modules/

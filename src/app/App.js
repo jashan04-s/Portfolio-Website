@@ -1,5 +1,5 @@
 import React from 'react' ;
-import {Hero, Navbar, Skills, Projects, Contact} from "./components";
+import {Hero, Navbar, Skills, Projects, Contact, Resume} from "./components";
 
 import "./App.css"
 

@@ -22,9 +22,9 @@ const Hero = () => {
           Welcome to my creative corner! I'm a passionate software developer crafting immersive experiences that resonate and inspire.
         </div>
         <div className = "hero__items">
-          <div className = "resumeButton">
+          <a href =  "resume" className = "resumeButton">
             Resume
-          </div>
+          </a>
           <div className = "hero__socials">
             <img src = {githubIcon}/>
             <img src = {emailIcon}/>
