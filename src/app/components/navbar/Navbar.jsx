@@ -6,20 +6,20 @@ import {RxHamburgerMenu, RxCross2} from 'react-icons/rx';
 
 const Menu = () =>{
   return(<>
-    <a href = "home" className = "navbar__home navbar__link"> 
+    <a href = "#home" className = "navbar__home navbar__link"> 
         <img src = {star} className = "navbar__icon"/> 
         <div className = "navbar__link__caption"> Home </div>
     </a> 
             
-    <div className = "navbar__skills navbar__link"> 
+    <a href = "#skills" className = "navbar__skills navbar__link"> 
       <img src = {star} className = "navbar__icon"/> 
       <div className = "navbar__link__caption"> Skills </div>
-    </div> 
+    </a> 
             
-    <div className = "navbar__portfolio navbar__link"> 
+    <a href = "#projects" className = "navbar__portfolio navbar__link"> 
       <img src = {star} className = "navbar__icon"/> 
       <div className = "navbar__link__caption"> Projects </div>
-    </div>
+    </a>
             
     <div className = "navbar__contact"> 
       Contact Me

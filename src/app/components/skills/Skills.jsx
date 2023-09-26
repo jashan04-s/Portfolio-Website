@@ -1,9 +1,6 @@
 import React from 'react';
 import "./skills.css";
 
-
-
-
 function importAll(r) {
     let images = {};
     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
@@ -16,7 +13,7 @@ const icons = importAll(require.context("../../../assets/skillicons", false, /\.
 const Skills = () => {
 
     return (
-        <>
+        <div id = "skills">
             <div className="skill__header skill__header--font">
                 My Skills
             </div>
@@ -112,7 +109,7 @@ const Skills = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

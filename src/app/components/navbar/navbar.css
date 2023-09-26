@@ -136,13 +136,13 @@
 }
 
 .navbar__icon{
-    transition: var(--icon-hover-transition);
+    transition: var(--navbar-text-hover-transition);
 }
 
 .navbar__right-links > *:hover{
     font-size: 2rem ;
     .navbar__icon{
-        transform: rotate(215deg) scale(1.25);
+        transform: var(--icon-hover-transition);
     }
 }
 

@@ -8,7 +8,7 @@ import PortfolioWebsite from "../../../assets/projectimages/portfoliowebsite.png
 const Projects = () => {
 
     return (
-        <div className = "projects">
+        <div className = "projects" id = "projects">
             <div className = "projects__header projects__header--font">
                 Projects
             </div>
