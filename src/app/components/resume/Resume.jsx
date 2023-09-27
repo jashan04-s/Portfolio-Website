@@ -1,11 +1,26 @@
 import React from 'react';
-import resumePDF from "../../../assets/other/GurjashanSinghResume.pdf"
+import {useState} from 'react';
 import "./resume.css" ;
 
+
+import { Document, Page, pdfjs } from "react-pdf";
+import resumePDF from "../../../assets/other/GurjashanSinghResume.pdf"
+
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.js',
+    import.meta.url,
+  ).toString();
+
+
+
 const Resume =  () => {
+    
     return(
     <div className = "pdf">
-        <iframe src  = {resumePDF} width = "100%" height = "100%"></iframe>
+        <Document file = {resumePDF}>
+            <Page pageNumber={1} renderTextLayer = {false}/> 
+        </Document>
     </div>
     );
 }
