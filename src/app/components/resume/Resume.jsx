@@ -15,13 +15,18 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 
 const Resume =  () => {
-    
+
     return(
     <div className = "pdf">
-        <Document file = {resumePDF}>
-            <Page pageNumber={1} renderTextLayer = {false}/> 
+        <Document file = {resumePDF} pageLayout = "singlePage">
+            <Page pageNumber={1} height={1000} renderTextLayer = {false}/> 
         </Document>
+        <div className = "buttons">
+            <button className = "return"> Return </button>
+            <button className = "return"> Download </button>
+        </div>
     </div>
+    
     );
 }
 

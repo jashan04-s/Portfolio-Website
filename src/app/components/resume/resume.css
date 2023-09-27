@@ -4,3 +4,21 @@
     justify-content: center;
 }
 
+.annotationLayer{
+    display: none;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+.return{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    height: 40px;
+    text-align: center;
+}
+
+.pdf > *{
+    flex: 1;
+}
