@@ -8,16 +8,16 @@
     display: none;
 }
 
-.buttons{
+.pdf__buttons{
     display: flex;
     margin: 1% 0%;
 }
 
-.buttons > *{
+.pdf__buttons > *{
     flex: 1;
 } 
 
-.return{
+.button__return-pdf, .button__download-pdf{
     margin-top: 0.5rem;
     font-size: 1.5rem;
     color: var(--text-color);

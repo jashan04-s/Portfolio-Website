@@ -24,9 +24,9 @@ const Resume =  () => {
             <Page pageNumber={1} height={1000} renderTextLayer = {false}/> 
         </Document>
     </div>
-        <div className = "buttons">
-            <Link to = "/" className = "return"> Return </Link>
-            <a href = {resumePDF} className= "return"> Download </a>
+        <div className = "pdf__buttons">
+            <Link to = "/" className = "button__return-pdf"> Return </Link>
+            <a href = {resumePDF} className= "button__download-pdf"> Download </a>
         </div>
     </div>
     
