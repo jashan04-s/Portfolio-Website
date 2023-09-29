@@ -1,7 +1,7 @@
 .pdf{
     background-color: var(--background-color);
     display: flex;
-    justify-content: center;
+    flex-direction: column-reverse;
 }
 
 .annotationLayer{
@@ -10,15 +10,30 @@
 
 .buttons{
     display: flex;
-    flex-direction: column;
+    margin: 1% 0%;
 }
+
+.buttons > *{
+    flex: 1;
+} 
+
 .return{
-    color: var(--primary-color);
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-family: var(--text-font);
     background-color: var(--secondary-color);
-    height: 40px;
+    margin-inline: 1%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
     text-align: center;
 }
 
-.pdf > *{
-    flex: 1;
+.pdf__container{
+    display: flex;
+    justify-content: center;
 }
+
+
+

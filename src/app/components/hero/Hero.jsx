@@ -8,6 +8,7 @@ import linkedinIcon from '../../../assets/linkedinicon.png';
 import githubIcon from '../../../assets/githubicon.png';
 import emailIcon from '../../../assets/emailicon.png';
 
+import {Link} from "react-router-dom";
 
 const Hero = () => {
   
@@ -22,9 +23,9 @@ const Hero = () => {
           Welcome to my creative corner! I'm a passionate software developer crafting immersive experiences that resonate and inspire.
         </div>
         <div className = "hero__items">
-          <a href =  "resume" className = "resumeButton">
+          <Link to =  "resume" className = "resumeButton">
             Resume
-          </a>
+          </Link>
           <div className = "hero__socials">
             <img src = {githubIcon}/>
             <img src = {emailIcon}/>
