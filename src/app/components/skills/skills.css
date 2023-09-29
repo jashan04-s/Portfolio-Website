@@ -31,7 +31,6 @@
     grid-column: span 2;
     background-color: var(--accent-color);
     border-radius: 20px;
-
 }
 
 .skill__backend{
@@ -51,7 +50,6 @@
     border-radius: 20px;
     color: var(--text-color);
 }
-
 
 .skill__header--font{
     font-size: 4rem;
