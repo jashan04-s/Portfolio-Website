@@ -2,11 +2,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import {Resume, ErrorPage} from "./components";
+import {Resume, AboutSkill, ErrorPage} from "./components";
 
 import "./index.css" ;
 
 import App from "./App";
+
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/resume",
     element: <Resume />,
+  },
+  {
+    path: "/about/:SkillName",
+    element: <AboutSkill/>,
   }
 ]);
 

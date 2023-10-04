@@ -2,6 +2,7 @@ import React from "react";
 import "./skills.css";
 
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 function importAll(r) {
   let images = {};
@@ -16,14 +17,16 @@ const icons = importAll(
 );
 
 const DisplayIcons = ({skillIcon}) =>{
-  
-  return(<>
-    {skillIcon.map((SkillIcon) => (
-      <div className="icons">
-        <div key = {SkillIcon}>
-          <img src={icons[SkillIcon +"icon.png"]} />
+  return(
+  <>
+    {skillIcon.map((SkillIconName) => (
+      <div className="icons" key = {SkillIconName}>
+        <div>
+          <Link to = {"./about/" + SkillIconName}>
+            <img src={icons[SkillIconName +"icon.png"]} />
+          </Link>
         </div>
-        <div className = "icon__caption"> {SkillIcon} </div>
+        <div className = "icon__caption"> {SkillIconName} </div>
       </div>
     )) 
   }
@@ -53,9 +56,6 @@ DisplaySkills.propTypes = {
   skillType: PropTypes.string,
   skillIcons: PropTypes.arrayOf(PropTypes.string),
 };
-
-
-
 
 const Skills = () => {
   const FrontendIcons = ["html", "css", "javascript", "react", "tailwind", "nextjs"]
