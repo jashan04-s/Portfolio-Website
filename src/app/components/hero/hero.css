@@ -53,7 +53,7 @@
     align-items: center;
 }
 
-.hero__socials > *{
+.hero__socials__icon{
     width: 40px;
     margin-inline: 10px;
 }

@@ -24,12 +24,12 @@ const Hero = () => {
         </div>
         <div className = "hero__items">
           <Link to =  "resume" className = "resumeButton">
-            Resume
+          Résumé
           </Link>
           <div className = "hero__socials">
-            <img src = {githubIcon}/>
-            <img src = {emailIcon}/>
-            <img src = {linkedinIcon}/>
+            <a href = "https://www.linkedin.com/in/gurjashan-singh-b45a88293" target="_blank"><img src = {linkedinIcon} className= "hero__socials__icon"/></a>
+            <img src = {emailIcon} className= "hero__socials__icon"/>
+            <a href = "https://github.com/jashan04-s" target="_blank"><img src = {githubIcon} className= "hero__socials__icon"/></a>
           </div>
         </div>
       </div>

@@ -51,6 +51,7 @@
     color: var(--text-color);
 }
 
+
 .skill__header--font{
     font-size: 4rem;
     font-family: var(--text-font);
@@ -95,4 +96,8 @@
 .icons > div{
     display: flex;
     justify-content: center;
+}
+
+.icon__caption{
+    text-transform: capitalize;
 }
