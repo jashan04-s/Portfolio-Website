@@ -1,5 +1,24 @@
-.about{
-    background-color: orange;
-    height: 90px;
-    width: 90px;
+.about--positioner{
+        display: flex;
+    justify-content: center;
+
+    margin-top: 30vh;
 }
+
+.about{
+    background-color: purple;
+    width: 75%;
+    border-radius: 25px;
+    display: flex;
+    padding: 2rem;
+}
+
+.about > *{
+    flex: 1;
+}
+
+.about__icon, .about__information{
+    display: flex;
+    justify-content: center;
+}
+
