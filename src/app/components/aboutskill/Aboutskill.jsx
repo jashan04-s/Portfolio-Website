@@ -20,14 +20,14 @@ const Aboutskill = () => {
   console.log(SkillName)
   return (
     <div className = "about--positioner">
-      <div className = "about">
+      <div className = "about__card">
         <div className = "about__icon">
-          <img src = {icons[SkillName + "icon.png"]}></img>
+          <img className = "about__icon--shadow" src = {icons[SkillName + "icon.png"]} width = "300px"></img>
         </div>
         <div className = "about__information">
           Random Placeholder Content
         </div>
-        </div>
+      </div>
     </div>
   )
 }

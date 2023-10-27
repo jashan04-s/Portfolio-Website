@@ -23,7 +23,7 @@ const DisplayIcons = ({skillIcon}) =>{
       <div className="icons" key = {SkillIconName}>
         <div>
           <Link to = {"./about/" + SkillIconName}>
-            <img src={icons[SkillIconName +"icon.png"]} />
+            <img src={icons[SkillIconName +"icon.png"]} width = "100px"/>
           </Link>
         </div>
         <div className = "icon__caption"> {SkillIconName} </div>

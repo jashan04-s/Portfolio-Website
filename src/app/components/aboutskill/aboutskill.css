@@ -1,24 +1,23 @@
 .about--positioner{
-        display: flex;
-    justify-content: center;
-
-    margin-top: 30vh;
-}
-
-.about{
-    background-color: purple;
-    width: 75%;
-    border-radius: 25px;
     display: flex;
-    padding: 2rem;
+    align-items: center;
+    height: 100vh;
 }
 
-.about > *{
-    flex: 1;
-}
-
-.about__icon, .about__information{
+.about__card{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    color:white;
 }
 
+.about__icon{
+    background-color: #242323;
+    border-radius: 50%;
+    padding: 5rem;
+    padding-bottom: 3rem;
+}
+
+.about__information{
+    display: flex;
+    align-items: center;
+}
