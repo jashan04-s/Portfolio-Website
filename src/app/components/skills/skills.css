@@ -82,6 +82,7 @@
     display: flex;
     align-items: center;
     margin: 1rem 0;
+
 }
 
 .frontend__icons > * , .backend__icons > *, .other__icons > *, .tools__icons > * {
@@ -101,3 +102,22 @@
 .icon__caption{
     text-transform: capitalize;
 }
+
+.icons__img {
+	transition: .3s ease-in-out;
+}
+
+.icon__caption{
+    box-shadow: inset 0 0 0 0 black;
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+.icons__img:hover {
+	opacity: 0.8;
+}
+
+.icon__caption:hover{
+    box-shadow: inset 200px 0 0 0 black;
+    color: var(--primary-color);
+}
+

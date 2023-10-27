@@ -23,7 +23,7 @@ const DisplayIcons = ({skillIcon}) =>{
       <div className="icons" key = {SkillIconName}>
         <div>
           <Link to = {"./about/" + SkillIconName}>
-            <img src={icons[SkillIconName +"icon.png"]} width = "100px"/>
+            <img className = "icons__img" src={icons[SkillIconName +"icon.png"]}  height= "100px" />
           </Link>
         </div>
         <div className = "icon__caption"> {SkillIconName} </div>
@@ -58,7 +58,7 @@ DisplaySkills.propTypes = {
 };
 
 const Skills = () => {
-  const FrontendIcons = ["html", "css", "javascript", "react", "tailwind", "nextjs"]
+  const FrontendIcons = ["html", "css", "javascript", "react", "tailwindCSS", "nextjs"]
   const BackendIcons = ["mysql", "node"]
   const OtherIcons = ["c++", "c", "python", "matlab", "verilog"]
   const ToolIcons = ["webpack", "git"]
