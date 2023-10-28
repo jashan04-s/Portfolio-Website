@@ -44,6 +44,7 @@
     border-radius: 20px;
     color: var(--background-color);
 }
+
 .skill__other{
     grid-column: span 2;
     background-color: var(--primary-color);
@@ -94,7 +95,7 @@
     font-size: 1.5rem;
 }
 
-.icons > div{
+.icon__caption--positioner, .icon--positioner{
     display: flex;
     justify-content: center;
 }
@@ -110,6 +111,7 @@
 .icon__caption{
     box-shadow: inset 0 0 0 0 black;
     transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+    cursor: pointer;
 }
 
 .icons__img:hover {
@@ -121,3 +123,12 @@
     color: var(--primary-color);
 }
 
+.skill__backend--text, .skill__other--text{
+    color: white;
+    margin-block: 5%;
+}
+
+.skill__frontend--text, .skill__tools--text{
+    color: black;
+    margin-block: 5%;
+}

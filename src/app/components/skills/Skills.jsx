@@ -16,17 +16,17 @@ const icons = importAll(
   require.context("../../../assets/skillicons", false, /\.(png)$/)
 );
 
-const DisplayIcons = ({skillIcon}) =>{
+const DisplayIcons = ({skillType, skillIcon}) =>{
   return(
   <>
     {skillIcon.map((SkillIconName) => (
       <div className="icons" key = {SkillIconName}>
-        <div>
-          <Link to = {"./about/" + SkillIconName}>
+        <Link to = {"./about/" + SkillIconName}>
+        <div className = "icon--positioner">
             <img className = "icons__img" src={icons[SkillIconName +"icon.png"]}  height= "100px" />
-          </Link>
         </div>
-        <div className = "icon__caption"> {SkillIconName} </div>
+        <div className = {"skill__" + skillType + "--text" + " icon__caption icon__caption--positioner"} > {SkillIconName} </div>
+        </Link>
       </div>
     )) 
   }
@@ -37,6 +37,7 @@ const DisplayIcons = ({skillIcon}) =>{
 
 DisplayIcons.propTypes = {
   skillIcon: PropTypes.arrayOf(PropTypes.string),
+  skillType: PropTypes.arrayOf(PropTypes.string),
 };
 
 const DisplaySkills = ({ skillType, skillIcons }) => {
@@ -46,7 +47,7 @@ const DisplaySkills = ({ skillType, skillIcons }) => {
     <div className={"skill__" + skillType}>
       <div className={skillType + "__header"}> {skillType} </div>
       <div className={skillType + "__icons"}>
-        <DisplayIcons skillIcon = {skillIcons} />
+        <DisplayIcons skillIcon = {skillIcons} skillType={skillType} />
       </div>
     </div>
   );

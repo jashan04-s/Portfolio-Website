@@ -1,6 +1,5 @@
 
 .navbar {
-
     display: flex;
     justify-content: center;
     width: 100%;
@@ -16,7 +15,7 @@
 }
 
 .navbar__left--font{
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-size: 3.5rem;
     font-family: var(--header-font);
     font-weight: bolder;
@@ -71,14 +70,6 @@
     align-items: center;
 }
 
-.navbar__contact{
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border-radius: 25px;
-    text-align: center;
-    padding: 5px;
-    cursor: pointer;
-}
 
 .navbar__menu, .navbar__hamburger_icon{
     display: none;
@@ -95,7 +86,7 @@
         display: none;
     }
 
-    .navbar__link__caption, .navbar__contact{
+    .navbar__link__caption{
         margin-block: 5%;
     }
 
@@ -147,7 +138,22 @@
     }
 }
 
+.logo__effect{
+    position: absolute;
+    translate: 4% 4%;
+    color: var(--accent-color);
+}
 
+.logo__effect_2{
+    position: absolute;
+    translate: 8% 8%;
+    color: var(--primary-color);
+}
 
+.logo__effect_3{
+    position: absolute;
+    translate: 12% 12%;
+    color: var(--text-color);
+}
 
 
