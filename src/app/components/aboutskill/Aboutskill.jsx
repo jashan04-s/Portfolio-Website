@@ -2,7 +2,7 @@ import React from 'react'
 import {BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill} from 'react-icons/bs';
 
 import "./aboutskill.css" ;
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function importAll(r) {
   let images = {};
@@ -16,19 +16,42 @@ const icons = importAll(
   require.context("../../../assets/skillicons", false, /\.(png)$/)
 );
 
+const SkillsList = ["html","css","javascript", "react", "tailwindCSS", "nextjs", "mysql", "node", "c++", "c", "python", "matlab", "verilog", "webpack", "git"]
 
-
+const displayNextPage = (currentSkill, forward = true) => {
+  
+  
+  let currentIndex = SkillsList.indexOf(currentSkill)
+  
+  if(forward){
+    currentIndex++
+  }
+  else{
+    currentIndex--
+  }
+  
+  if(currentIndex == SkillsList.length){
+    currentIndex = 0
+  }
+  else if(currentIndex == 0){
+    currentIndex =  SkillsList.length - 1
+  }
+  
+  return '../about/' + SkillsList[currentIndex]
+  
+}
 
 
 
 const Aboutskill = () => {
   
+  const navigate = useNavigate();
   const { SkillName } = useParams();
 
   console.log(SkillName)
   return (
     <div className = "about--positioner">
-      <div className= "about__left"> <BsFillArrowLeftSquareFill size = {56}/> </div>
+      <div className= "about__right" onClick = {() => navigate(displayNextPage(SkillName, false))}> <BsFillArrowLeftSquareFill size = {56}/> </div>
       <div className = "about__card">
         <div className = "about__icon">
           <img className = "about__icon--size" src = {icons[SkillName + "icon.png"]}></img>
@@ -43,7 +66,7 @@ Inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on sui
         </div>
       </div>
 
-      <div className= "about__left"> <BsFillArrowRightSquareFill size = {56}/>  </div>
+      <div className= "about__left" onClick = {() => navigate(displayNextPage(SkillName))}> <BsFillArrowRightSquareFill size = {56}/>  </div>
     </div>
   )
 }
