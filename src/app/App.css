@@ -28,5 +28,7 @@ a {
   text-decoration: none;
 }
 
-
+::selection {
+  background: none;
+}
 

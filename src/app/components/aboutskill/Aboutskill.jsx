@@ -33,7 +33,7 @@ const displayNextPage = (currentSkill, forward = true) => {
   if(currentIndex == SkillsList.length){
     currentIndex = 0
   }
-  else if(currentIndex == 0){
+  else if(currentIndex == -1){
     currentIndex =  SkillsList.length - 1
   }
   
@@ -50,24 +50,29 @@ const Aboutskill = () => {
 
   console.log(SkillName)
   return (
-    <div className = "about--positioner">
-      <div className= "about__right" onClick = {() => navigate(displayNextPage(SkillName, false))}> <BsFillArrowLeftSquareFill size = {56}/> </div>
-      <div className = "about__card">
-        <div className = "about__icon">
-          <img className = "about__icon--size" src = {icons[SkillName + "icon.png"]}></img>
-        </div>
-        <div className = "about__information">
-        <div className = "about__header"> {SkillName} </div>
-        <div className = "about__content">
-        She literature discovered increasing how diminution understood. Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World mrs and vexed china since after often.
+    <>
+      <div className = "return" onClick = {() => navigate('../..')}> Return </div>
+      <div className = "about--positioner">
+        <div className= "about__right" onClick = {() => navigate(displayNextPage(SkillName, false))}> <BsFillArrowLeftSquareFill size = {56}/> </div>
+        
+        
+        <div className = "about__card">
+          <div className = "about__icon">
+            <img className = "about__icon--size" src = {icons[SkillName + "icon.png"]}></img>
+          </div>
+          <div className = "about__information">
+          <div className = "about__header"> {SkillName} </div>
+          <div className = "about__content">
+          She literature discovered increasing how diminution understood. Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World mrs and vexed china since after often.
 
-Inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do although blessing he juvenile in. Society or if excited forbade. Here name off yet she long sold easy whom. Differed oh cheerful procured pleasure securing suitable in. Hold rich on an he oh fine. Chapter ability shyness article welcome be do on service.
+  Inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do although blessing he juvenile in. Society or if excited forbade. Here name off yet she long sold easy whom. Differed oh cheerful procured pleasure securing suitable in. Hold rich on an he oh fine. Chapter ability shyness article welcome be do on service.
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className= "about__left" onClick = {() => navigate(displayNextPage(SkillName))}> <BsFillArrowRightSquareFill size = {56}/>  </div>
-    </div>
+        <div className= "about__left" onClick = {() => navigate(displayNextPage(SkillName))}> <BsFillArrowRightSquareFill size = {56}/>  </div>
+      </div>
+  </>
   )
 }
 

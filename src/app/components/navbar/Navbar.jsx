@@ -61,7 +61,7 @@ const Navbar = () => {
               <RxHamburgerMenu size = {56}/>
             </div>
             }
-
+          
 
           </div>
         </div>
