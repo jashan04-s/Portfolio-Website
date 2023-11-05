@@ -22,10 +22,10 @@ const DisplayIcons = ({skillType, skillIcon}) =>{
     {skillIcon.map((SkillIconName) => (
       <div className="icons" key = {SkillIconName}>
         <Link to = {"./about/" + SkillIconName}>
-        <div className = "icon--positioner">
+        <div className = "icon__effect icon--positioner">
             <img className = "icons__img" src={icons[SkillIconName +"icon.png"]}  height= "100px" />
         </div>
-        <div className = {"skill__" + skillType + "--text" + " icon__caption icon__caption--positioner"} > {SkillIconName} </div>
+        <div className = {"skill__" + skillType + "--text" + " icon__caption icon__caption--positioner"}  > {SkillIconName} </div>
         </Link>
       </div>
     )) 

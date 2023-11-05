@@ -1,4 +1,120 @@
-.contact{
-    margin-top: 7.5%;
-    color: white;
+
+
+.contact__header{
+    display: flex;
+    justify-content: center;
+    margin-block: 7.5%;
+}
+
+.contact__header--font{
+    font-size: 4rem;
+    font-family: var(--header-font);
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+
+.contact__intro{
+    margin-block: 2.5%;
+    margin-inline: 5%;
+    font-size: 1.5rem;
+    color: var(--text-color); 
+    font-family: var(--text-font);
+    text-align: center;
+}
+
+.contact__form{
+    background-color: var(--contact-background-color);
+    padding-left:4rem;
+    margin-inline: 10%;
+    border-radius: 25px;
+}
+
+.contact__form--font{
+    font-size: 1.5rem;
+    font-family: var(--text-font);
+    color: var(--text-color)
+}
+
+
+input[type = text], textarea{
+    display: block;
+    background-color: var(--contact-background-color);
+    border-radius: 10px;
+    border-style: none; 
+    caret-color: white;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-family: var(--text-font)
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+}
+
+#name, #email{
+    height: 3rem;
+    width: 100%;
+}
+
+#message{
+    height: 15rem;
+    width: 100%;
+}
+
+.contact__form > form{
+    padding: 2.5rem 1rem;
+}
+
+input:-webkit-autofill{
+   background-color: var(--contact-background-color);
+}
+
+.contact__form{
+    display: flex;
+}
+
+.contact__form > *{
+    flex: 1;
+}
+
+.contact__LottieMail{
+    display: flex;
+    flex-direction: column;
+}
+
+.LottieMail--positioner{
+    align-self: center;
+}
+.contact__LottieMail > *{
+    flex: 1;
+}
+
+
+.info__email, .info__phone{
+    display: flex;
+    align-items: center;
+}
+
+.info__email > img, .info__phone > img{
+    margin-inline: 2rem 2rem;
+}
+
+.contact__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form--positioner{
+    margin-block: 1.5rem;
 }

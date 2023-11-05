@@ -55,7 +55,7 @@
 
 .skill__header--font{
     font-size: 4rem;
-    font-family: var(--text-font);
+    font-family: var(--header-font);
     color: var(--text-color);
     text-decoration: underline;
     text-decoration-color: var(--primary-color);
@@ -70,7 +70,7 @@
 .skill__header__text--font{
     color: var(--text-color);
     font-family: var(--text-font);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .skill__header__text{
@@ -114,8 +114,13 @@
     cursor: pointer;
 }
 
-.icons__img:hover {
-	opacity: 0.8;
+.icon__effect:hover  + .icon__caption {
+    box-shadow: inset 200px 0 0 0 black;
+    color: var(--primary-color);
+}
+
+.icon__effect:hover{
+    opacity: 0.8;
 }
 
 .icon__caption:hover{

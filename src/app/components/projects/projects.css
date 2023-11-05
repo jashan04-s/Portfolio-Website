@@ -6,7 +6,7 @@
 
 .projects__header--font{
     font-size: 4rem;
-    font-family: var(--text-font);
+    font-family: var(--header-font);
     color: var(--text-color);
     text-decoration: underline;
     text-decoration-color: var(--primary-color);
