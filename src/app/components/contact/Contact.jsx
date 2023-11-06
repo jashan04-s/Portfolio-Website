@@ -9,9 +9,9 @@ import mailIcon from "../../../assets/contactmail.png";
 
 const Contact = () => {
   return (
-    <div className="contact">
-      <div className="contact__header contact__header--font">Contact Me</div>
-      <div className="contact__intro contact__intro--font">
+    <div className = "contact" id = "contactmeform">
+      <div className = "contact__header contact__header--font">Contact Me</div>
+      <div className = "contact__intro contact__intro--font">
         Whether you have a question, a project idea, or just want to say hello,
         I'm all ears! Don't hesitate to get in touch. I'm open to new
         opportunities and collaborations.

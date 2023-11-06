@@ -28,7 +28,7 @@ const Hero = () => {
           </Link>
           <div className = "hero__socials">
             <a href = "https://www.linkedin.com/in/gurjashan-singh-b45a88293" target="_blank"><img src = {linkedinIcon} className= "hero__socials__icon"/></a>
-            <img src = {emailIcon} className= "hero__socials__icon"/>
+            <a href = "#contactmeform"><img src = {emailIcon} className= "hero__socials__icon"/></a>
             <a href = "https://github.com/jashan04-s" target="_blank"><img src = {githubIcon} className= "hero__socials__icon"/></a>
           </div>
         </div>

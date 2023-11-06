@@ -4,5 +4,6 @@ export { default as Skills } from "./skills/Skills.jsx";
 export { default as Projects } from "./projects/Projects.jsx";
 export { default as Contact } from "./contact/Contact.jsx";
 export { default as Resume } from "./resume/Resume.jsx";
-export { default as ErrorPage } from "./errorPage/ErrorPage.jsx";
 export { default as AboutSkill } from "./aboutskill/Aboutskill.jsx";
+export { default as Experience } from "./experience/Experience.jsx";
+export { default as ErrorPage } from "./errorPage/ErrorPage.jsx";

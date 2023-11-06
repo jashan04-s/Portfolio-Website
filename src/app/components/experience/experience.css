@@ -1,0 +1,13 @@
+.experience__header{
+    display: flex;
+    justify-content: center;
+    margin-block: 7.5%;
+}
+
+.experience__header--font{
+    font-size: 4rem;
+    font-family: var(--header-font);
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}

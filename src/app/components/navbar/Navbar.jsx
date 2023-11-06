@@ -16,7 +16,7 @@ const Menu = () =>{
       <div className = "navbar__link__caption"> Skills </div>
     </a> 
 
-    <a href = "#projects" className = "navbar__portfolio navbar__link"> 
+    <a href = "#myExperience" className = "navbar__portfolio navbar__link"> 
       <img src = {star} className = "navbar__icon"/> 
       <div className = "navbar__link__caption"> Experience </div>
     </a>
