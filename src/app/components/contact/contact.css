@@ -3,7 +3,7 @@
 .contact__header{
     display: flex;
     justify-content: center;
-    margin-block: 7.5%;
+    margin-top: 7.5%;
 }
 
 .contact__header--font{

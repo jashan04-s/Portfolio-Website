@@ -1,4 +1,4 @@
-import React from 'react' ;
+import React, { useEffect } from 'react' ;
 import "./navbar.css" ;
 import star from "../../../assets/navbarstar.png"
 import {RxHamburgerMenu, RxCross2} from 'react-icons/rx';
@@ -34,6 +34,22 @@ const Navbar = () => {
 
   const [isMenuOpen, setMenuState] = React.useState(false);
 
+  const handleMouse = (event) => {
+    setMousePosition({x: event.clientX, y: event.clientY});
+  }
+  
+
+  const  [mousePosition, setMousePosition] = React.useState({})
+
+  useEffect(() => {  
+    window.addEventListener('mousemove', handleMouse)
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouse)
+    }
+  }, [])
+
+  console.log(mousePosition.x, mousePosition.y)
 
   return (
         <div className = "navbar navbar--background">
@@ -70,3 +86,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
