@@ -13,7 +13,73 @@
 }
 
 .project__content{
+    display: flex;
     background-image: url(../../../assets/projectimages/portfoliowebsite.png);
     background-size: cover;
-    height: 800px;
+    height: 700px;
+    color: var(--text-color);
 }
+
+.project__container, .project__slider{
+    flex: 1;
+}
+
+
+.project__container{    
+    margin-inline: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project__name{
+    font-size:4.5rem;
+    font-family: var(--header-font);
+    font-weight: bold;
+}
+
+.project__description{
+    font-size: 1.25rem;
+    font-family: var(--text-font);
+    display: flex;
+    flex-direction: column;
+}
+
+.project__description > *{
+    margin-top: 5%;
+}
+
+.description__button > button{
+    margin-inline: 2.5%;
+}
+
+.slider__grid{
+    display: flex;
+}
+
+.slider__grid > * {
+    justify-content: flex-end;
+    margin-inline: 1%;
+    box-shadow: 10px 5px 5px var(--secondary-color);
+}
+
+.project__content > * {
+    flex: 1 ;
+}
+
+.project__slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 20%;
+}
+
+.navigation__arrow{
+    display: flex;
+    margin-top: 5%;
+}
+
+.arrow__right, .arrow__left{
+    margin-inline: 1%;
+}
+
