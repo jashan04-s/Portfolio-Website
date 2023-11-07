@@ -16,28 +16,28 @@ const Contact = () => {
         I'm all ears! Don't hesitate to get in touch. I'm open to new
         opportunities and collaborations.
       </div>
-      <div class="contact__form contact__form--font">
+      <div className="contact__form contact__form--font">
         <form>
           <div className="form__name form--positioner">
-            <label for="name" className="form__label">
+            <label htmlFor="name" className="form__label">
               {" "}
               Your Name{" "}
             </label>
-            <input type="text" id="name" maxlength="32" />
+            <input type="text" id="name" maxLength="32" />
           </div>
           <div className="form__email  form--positioner">
-            <label for="email" className="form__label">
+            <label htmlFor="email" className="form__label">
               {" "}
               Your Email{" "}
             </label>
-            <input type="text" id="email" maxlength="32" />
+            <input type="text" id="email" maxLength="32" />
           </div>
           <div className="form__message  form--positioner">
-            <label for="message" className="form__label">
+            <label htmlFor="message" className="form__label">
               {" "}
               Your Message{" "}
             </label>
-            <textarea id="message" maxlength="500" row="10" col="50" />
+            <textarea id="message" maxLength="500" row="10" col="50" />
           </div>
           <div className="form__submit form--positioner ">
             <button type="submit"> Send </button>

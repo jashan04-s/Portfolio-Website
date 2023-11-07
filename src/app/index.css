@@ -19,4 +19,7 @@
     --hover-transition: all 0.1s ease-out 0.05s;
     --navbar-text-hover-transition: transform 0.7s ease-in-out;
     --icon-hover-transition: rotate(215deg) scale(1.25);
+
+    --logo-translate-x: 8%;
+    --logo-translate-y: 8%;
 }

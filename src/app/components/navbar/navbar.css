@@ -138,21 +138,15 @@
     }
 }
 
-.logo__effect{
+.logo__effect_1{
     position: absolute;
-    translate: 4% 4%;
+    translate: var(--logo-translate-x) var(--logo-translate-y);
     color: var(--accent-color);
 }
 
 .logo__effect_2{
     position: absolute;
-    translate: 8% 8%;
-    color: var(--primary-color);
-}
-
-.logo__effect_3{
-    position: absolute;
-    translate: 12% 12%;
+    translate: calc(2 * var(--logo-translate-x)) calc(2 * var(--logo-translate-y));
     color: var(--text-color);
 }
 

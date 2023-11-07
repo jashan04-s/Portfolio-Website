@@ -36,6 +36,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .resumeButton{
     margin-top: 4rem;
     font-size: 1.5rem;
@@ -44,6 +45,11 @@
     background-color: var(--secondary-color);
     padding: 2%;
     border-radius: 5px;
+    transition: .1s ease-in-out;
+}
+
+.resumeButton:hover{
+    opacity: 0.8;
 }
 
 .hero__socials{
@@ -53,9 +59,15 @@
     align-items: center;
 }
 
+
 .hero__socials__icon{
     width: 40px;
     margin-inline: 10px;
+    transition: .1s ease-in-out;
+}
+
+.hero__socials__icon:hover{
+    opacity: 0.8;
 }
 
 @media screen and (max-width:1024px){

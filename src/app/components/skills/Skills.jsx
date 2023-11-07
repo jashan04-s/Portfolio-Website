@@ -37,7 +37,7 @@ const DisplayIcons = ({skillType, skillIcon}) =>{
 
 DisplayIcons.propTypes = {
   skillIcon: PropTypes.arrayOf(PropTypes.string),
-  skillType: PropTypes.arrayOf(PropTypes.string),
+  skillType: PropTypes.string,
 };
 
 const DisplaySkills = ({ skillType, skillIcons }) => {
