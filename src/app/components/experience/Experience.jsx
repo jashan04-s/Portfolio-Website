@@ -12,7 +12,7 @@ const Experience = () => {
             <div className="internship__date"> May 2023 - August 2023 </div>
         </div>
         <div className = "internship__description">
-            <div> <span className = "description__bullet--style"> 1 </span> Developed and Maintained a responsive website using HTML and CSS</div>
+            <div> <span className = "description__bullet--style"> 1 </span> Developed and Maintained a responsive website using HTML, vanilla CSS and Javascript</div>
             <div> <span className = "description__bullet--style"> 2 </span> Colaborated with the design team to implement user interface mockups and ensure pixel perfect implementations of Figma designs </div>
         </div>
       </div>

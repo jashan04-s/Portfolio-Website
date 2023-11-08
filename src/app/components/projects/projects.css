@@ -14,7 +14,7 @@
 
 .project__content{
     display: flex;
-    background-image: url(../../../assets/projectimages/portfoliowebsite.png);
+    background-image: url("../../../assets/projectimages/portfoliowebsite.png");
     background-size: cover;
     height: 700px;
     color: var(--text-color);

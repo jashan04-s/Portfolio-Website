@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./projects.css";
 
 import GoogleMapsClone from "../../../assets/projectimages/googlemapsclone.png";
@@ -6,13 +6,54 @@ import Kraya from "../../../assets/projectimages/kraya.png";
 import PortfolioWebsite from "../../../assets/projectimages/portfoliowebsite.png";
 
 import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons/bs';
-import { IconContext } from "react-icons";
+
+const ProjectList = ["http://localhost:3000/portfoliowebsite.png","http://localhost:3000/googlemapsclone.png", "http://localhost:3000/kraya.png"]
+
+
 
 const Projects = () => {
+  let [projectIndex, setProjectIndex] = useState(0);
+  let [projectDisplayUrl, setProjectDisplayUrl] = 
+  useState(
+    {backgroundImage: "http://localhost:3000/portfoliowebsite.png"}
+  );
+
+
+  const displayNextProject = () => {
+    if(projectIndex == ProjectList.length - 1){
+      setProjectIndex(0);
+    }
+    else{
+      setProjectIndex(projectIndex + 1)
+    }
+    console.log(projectIndex)
+    
+    setProjectDisplayUrl({
+      backgroundImage: 'url(' + ProjectList[projectIndex] + ')'
+    })
+
+    console.log(projectDisplayUrl)
+  }
+
+  const displayLastProject = () => {
+    if(projectIndex == 0){
+      setProjectIndex(ProjectList.length - 1)
+    }
+    else{
+      setProjectIndex(projectIndex - 1)
+    }
+
+    setProjectDisplayUrl({
+      backgroundImage: 'url(' + ProjectList[projectIndex] + ')'
+    })
+  }
+
+
+
   return (
     <div className="projects" id="projects">
       <div className="projects__header projects__header--font">Projects</div>
-      <div className="project__content">
+      <div className="project__content" style = {projectDisplayUrl}>
         <div className="project__container">
           <div className="project__name">Portfolio Website</div>
           <div className="project__description">
@@ -44,11 +85,11 @@ const Projects = () => {
             <div className = "navigation__arrow"> 
                 
                     <div className = "arrow__left">
-                        <BsFillArrowLeftCircleFill size= {48} color = "var(--primary-color)"/>
+                        <BsFillArrowLeftCircleFill size= {48} color = "var(--primary-color)" onClick = {displayLastProject}/>
                     </div>
                 
                 <div className = "arrow__right">
-                    <BsFillArrowRightCircleFill size= {48} color = "var(--primary-color)"/>
+                    <BsFillArrowRightCircleFill size= {48} color = "var(--primary-color)" onClick = {displayNextProject}/>
                 </div>
             </div>
           </div>
