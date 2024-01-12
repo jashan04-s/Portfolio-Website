@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./projects.css";
 
 import GoogleMapsClone from "../../../assets/projectimages/googlemapsclone.png";
@@ -7,26 +7,35 @@ import PortfolioWebsite from "../../../assets/projectimages/portfoliowebsite.png
 
 import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons/bs';
 
-const ProjectList = ["http://localhost:3000/portfoliowebsite.png","http://localhost:3000/googlemapsclone.png", "http://localhost:3000/kraya.png"]
-
-
+const ProjectList = ["./portfoliowebsite.png","./googlemapsclone.png", "./kraya.png"]
+const ImageList = [ PortfolioWebsite, GoogleMapsClone, Kraya]
+const ProjectInfo = {
+  name: ["Portfolio Website", "GoogleMapsClone", "Kraya"],
+  text: [ "random text for portfolio website",
+  "random text for google maps clone",
+  "random text for kraya" ],
+  skills: [ "React, Vanilla CSS ", "React", "C++"]
+}
 
 const Projects = () => {
   let [projectIndex, setProjectIndex] = useState(0);
   let [projectDisplayUrl, setProjectDisplayUrl] = 
   useState(
-    {backgroundImage: "http://localhost:3000/portfoliowebsite.png"}
+    {backgroundImage: 'url(' + ProjectList[projectIndex] + ')'}
   );
 
 
   const displayNextProject = () => {
+    
     if(projectIndex == ProjectList.length - 1){
       setProjectIndex(0);
     }
     else{
+      console.log(projectIndex)
       setProjectIndex(projectIndex + 1)
+      console.log(projectIndex)
     }
-    console.log(projectIndex)
+    
     
     setProjectDisplayUrl({
       backgroundImage: 'url(' + ProjectList[projectIndex] + ')'
@@ -55,13 +64,13 @@ const Projects = () => {
       <div className="projects__header projects__header--font">Projects</div>
       <div className="project__content" style = {projectDisplayUrl}>
         <div className="project__container">
-          <div className="project__name">Portfolio Website</div>
+          <div className="project__name">{ProjectInfo.name[projectIndex]}</div>
           <div className="project__description">
             <div className = "description__tech">
-                Technologies Used: React, Vanilla CSS 
+                Technologies Used: {ProjectInfo.skills[projectIndex]}
             </div>
             <div className = "description__text">
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasklhflj/o4jogi/nalka.dsngkj.sgbknsdrsaijfljjjjj
+              {ProjectInfo.text[projectIndex]}
             </div>
             <div className = "description__button">
                 <button> Visit Website </button>
@@ -72,13 +81,13 @@ const Projects = () => {
         <div className="project__slider">
           <div className="slider__grid">
             <div className="grid__one">
-              <img src={Kraya} width="300" />
+              <img src={ImageList[(projectIndex) % (ProjectList.length)]} width="300" />
             </div>
             <div className="grid__two">
-              <img src={GoogleMapsClone} width="300" />
+              <img src={ImageList[(projectIndex + 1) % (ProjectList.length)]} width="300" />
             </div>
             <div className="grid__three">
-              <img src={PortfolioWebsite} width="300" />
+              <img src={ImageList[(projectIndex + 2) % (ProjectList.length)]} width="300" />
             </div>
           </div>
           <div className = "grid__navigation">
