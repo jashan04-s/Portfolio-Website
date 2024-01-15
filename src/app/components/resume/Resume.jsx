@@ -3,26 +3,20 @@ import {Link} from "react-router-dom";
 
 import "./resume.css" ;
 
-
-import { Document, Page, pdfjs } from "react-pdf";
 import resumePDF from "../../../assets/other/GurjashanSinghResume.pdf"
 
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.js',
-    import.meta.url,
-  ).toString();
 
 
 
 const Resume =  () => {
 
+    let DocumentHeight = window.innerHeight;
+
     return(
     <div className = "pdf">
         <div className = "pdf__container">
-        <Document file = {resumePDF} pageLayout = "singlePage">
-            <Page pageNumber={1} height={1000} renderTextLayer = {false}/> 
-        </Document>
+        <embed src= {resumePDF} type="application/pdf" width="100%" height = {DocumentHeight} />
     </div>
         <div className = "pdf__buttons">
             <Link to = "/" className = "button__return-pdf"> Return </Link>

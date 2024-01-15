@@ -47,7 +47,7 @@ const Hero = () => {
           Hi, I'm <Typewriter text = "Gurjashan." speed = "250"/>
         </div>
         <div className = "hero__text hero__text--font">
-          Welcome to my creative corner! I'm a passionate software developer crafting immersive experiences that resonate and inspire
+          Welcome to my creative corner! I'm a passionate software developer crafting immersive experiences that resonate and inspire.
         </div>
         <div className = "hero__items">
           <Link to =  "resume" className = "resumeButton">

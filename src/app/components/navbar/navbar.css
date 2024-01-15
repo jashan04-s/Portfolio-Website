@@ -1,6 +1,7 @@
 
 .navbar {
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 100%;
     padding-top: 1%;
@@ -39,6 +40,7 @@
     font-family: var(--text-font);
 }
 
+
 .navbar__right-links{
     display: flex;
     align-content: center;
@@ -47,7 +49,8 @@
 
 
 .navbar__right-links > *{
-    flex: 1
+    flex: 1;
+    padding-inline: 2%;
 }
 
 .navbar__right--font{
@@ -75,6 +78,12 @@
     display: none;
 }
 
+.navbar_toggle__icons{
+    font-size: 48px;
+}
+
+
+
 /* Adding a hamburger icon for tablet screens or lower*/
 
 @media only screen and (max-width: 1024px){
@@ -82,12 +91,28 @@
     .navbar__left{
         margin-left: 2.5%;
     }
+
+    .navbar__left--font{
+        font-size: 2.5rem;    
+    }
+
+    .navbar__right--font{
+        font-size: 1rem;
+    }
+
     .navbar__right-links{
         display: none;
     }
 
+    .navbar__link__caption > * {
+        display: flex;
+        justify-content: center;
+    }
+
     .navbar__link__caption{
         margin-block: 5%;
+        flex: none;
+        padding-left: 5%;
     }
 
     .navbar__menu{
@@ -118,10 +143,37 @@
         width: 30%;
         margin-right: 2%;
     }
+
+    .navbar{
+        align-items: normal;
+    }
   
 }
 
 
+
+@media only screen and (max-width: 425px) {
+    .navbar__left{
+        display: none;
+    }
+
+    .navbar__right{
+        margin-top: 2.5%;
+    }
+
+    .navbar__right--font{
+        font-size: 0.75rem;
+    }
+
+    .navbar__icon{
+        width: 20px;
+    }
+
+    .navbar_toggle__icons{
+        font-size: 20px;
+    }
+    
+}
 
 .navbar__right-links > * {
     transition: var(--hover-transition);
@@ -149,5 +201,3 @@
     translate: calc(2 * var(--logo-translate-x)) calc(2 * var(--logo-translate-y));
     color: var(--text-color);
 }
-
-

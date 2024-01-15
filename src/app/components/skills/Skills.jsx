@@ -65,7 +65,7 @@ const Skills = () => {
   const ToolIcons = ["webpack", "git"]
 
   return (
-    <div id="skills">
+    <div className = "skill_section" id="skills">
       <div className="skill__header skill__header--font">My Skills</div>
       <div className="skill__header__text skill__header__text--font">
         Click on each icon to see my experience with each tool / programming
