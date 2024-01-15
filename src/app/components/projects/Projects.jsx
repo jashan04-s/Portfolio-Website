@@ -10,18 +10,17 @@ import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons
 const ProjectList = ["./portfoliowebsite.png","./googlemapsclone.png", "./kraya.png"]
 const ImageList = [ PortfolioWebsite, GoogleMapsClone, Kraya]
 const ProjectInfo = {
-  name: ["Portfolio Website", "GoogleMapsClone", "Kraya"],
-  text: [ "random text for portfolio website",
-  "random text for google maps clone",
-  "random text for kraya" ],
-  skills: [ "React, Vanilla CSS ", "React", "C++"]
+  name: [ "Kraya", "Portfolio Website", "GoogleMapsClone"],
+  text: [ "random text for kraya", "random text for portfolio website", "random text for google maps clone",
+  ],
+  skills: [ "React", "React, Vanilla CSS ", "C++"]
 }
 
 const Projects = () => {
-  let [projectIndex, setProjectIndex] = useState(0);
+  let [projectIndex, setProjectIndex] = useState(1);
   let [projectDisplayUrl, setProjectDisplayUrl] = 
   useState(
-    {backgroundImage: 'url(' + ProjectList[projectIndex] + ')'}
+    {backgroundImage: 'url(' + ProjectList[0] + ')'}
   );
 
 
