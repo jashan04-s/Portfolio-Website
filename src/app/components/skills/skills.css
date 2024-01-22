@@ -82,8 +82,7 @@
 .frontend__icons, .backend__icons, .other__icons, .tools__icons{
     display: flex;
     align-items: center;
-    margin: 1rem 0;
-
+    margin: 0.5rem 0.5rem;
 }
 
 .frontend__icons > * , .backend__icons > *, .other__icons > *, .tools__icons > * {
@@ -105,6 +104,7 @@
 }
 
 .icons__img {
+    height: 75px;
 	transition: .3s ease-in-out;
 }
 
@@ -136,4 +136,56 @@
 .skill__frontend--text, .skill__tools--text{
     color: black;
     margin-block: 5%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .skills{
+        grid-template-columns: 1fr;
+    }
+
+    .skills > * {
+        grid-column: span 1;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .frontend__icons, .backend__icons, .other__icons, .tools__icons{
+        flex-direction: column;
+    }
+
+    .skill__frontend, .skill__backend, .skill__other, .skill__tools{
+        margin-inline: 10%;
+    }
+    
+    .icons__small--positioner{
+        display: flex;
+        flex-direction: row;
+        margin-block: 10%;
+    }
+
+    .icons__img{
+        margin-right: 25%;
+        width: 50px;
+        height: auto;
+    }
+
+    .skills--font{
+        font-size: 2rem;
+    }
+
+    .icon__caption--positioner{
+        margin-left: 25%;
+    }
+
+    .icons{
+        font-size: 1rem;
+    }
+
+    .skill__header--font{
+        font-size: 2rem;
+    }
+
+    .skill__header__text--font{
+        font-size: 0.75rem;
+    }
 }

@@ -1,4 +1,6 @@
-
+.contact{
+    margin-bottom: 10%;
+}
 
 .contact__header{
     display: flex;
@@ -118,3 +120,4 @@ input:-webkit-autofill{
 .form--positioner{
     margin-block: 1.5rem;
 }
+

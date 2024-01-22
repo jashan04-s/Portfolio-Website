@@ -51,6 +51,11 @@
 .about__left, .about__right{
     color: white;
     margin-inline: 5%;
+    cursor: pointer;
+}
+
+.about__left > * :hover , .about__right > * :hover{
+    opacity: 0.2;
 }
 
 
@@ -74,5 +79,65 @@
 }
 
 
+@media only screen and (max-width: 1024px){
+    .about__header{
+        font-size: 2rem;
+    }
+
+    .about__information{
+        font-size: 1rem;
+    }
+
+    .return{
+        font-size: 1.5rem;
+    }
+
+    .about__left, .about__right{
+        margin-inline: 2.5%;
+    }
+
+}
 
 
+@media only screen and (max-width: 650px){
+    .about__icon{
+        display: none;
+    }
+
+    .about__left > * , .about__right > *{
+        height: 2.5rem;
+    }
+
+    .about__card{
+        padding-inline: 5%;
+        padding-block: 2.5%;
+    }
+
+}
+
+
+@media only screen and (max-width: 650px){
+    .about__left > * , .about__right > *{
+        height: 1.75rem;
+    }
+
+    .about__left, .about__right{
+        margin-inline: 0.5%;
+    }
+
+    .return{
+        font-size: 0.75rem;
+    }
+
+    .about__card{
+        margin: 0;
+    }
+
+    .about__header{
+        font-size: 1.5rem;
+    }
+
+    .about__information{
+        font-size: 0.75rem;
+    }
+}

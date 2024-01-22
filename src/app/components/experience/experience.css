@@ -39,7 +39,6 @@
     flex: 1;
 }
 
-
 .internship__description{
     font-size: 1.5rem;
     flex-basis: 40%;
@@ -51,4 +50,34 @@
     color: var(--primary-color);
     font-weight: bold;
     font-size: 3rem;
+}
+
+
+@media only screen and (max-width: 1024px){
+    .internship__date{
+        font-size: 1.5rem;
+    }
+
+    .description__bullet--style{
+        font-size:  2rem;
+    }
+
+    .internship__description{
+        font-size: 1rem;
+    }
+
+    .internship__name{
+        font-size: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 650px){
+    .experience__content{
+        flex-direction: column;
+    }
+
+    .experience__header{
+        font-size: 2rem;
+    }
 }
