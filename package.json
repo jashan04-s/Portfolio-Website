@@ -10,9 +10,11 @@
   "author": "Gurjashan Singh",
   "license": "MIT",
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "lottie-react": "^2.4.0",
+    "nodejs-nodemailer-outlook": "^1.2.4",
     "nodemailer": "^6.9.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

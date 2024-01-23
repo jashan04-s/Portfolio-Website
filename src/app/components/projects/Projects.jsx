@@ -11,9 +11,11 @@ const ProjectList = ["./portfoliowebsite.png","./googlemapsclone.png", "./kraya.
 const ImageList = [ PortfolioWebsite, GoogleMapsClone, Kraya]
 const ProjectInfo = {
   name: [ "Kraya", "Portfolio Website", "GoogleMapsClone"],
-  text: [ "random text for kraya", "random text for portfolio website", "random text for google maps clone",
+  text: [ "random text for krayBuilt a responsive landing page with HTML, CSS, and JavaScript, closely aligning with Figma designs and collaborating with a Git-based team.", 
+  "Crafted a sleek MERN portfolio with AWS S3, MongoDB, GSAP animations, and Nodemailer for user interaction.", 
+  "Developed a feature-rich C++ Google Maps clone using OpenStreetMap API, applying Dijkstra's and A* algorithms, addressing memory leaks with Valgrind, and implementing multi-threading for a significant reduction in query time",
   ],
-  skills: [ "React", "React, Vanilla CSS ", "C++"]
+  skills: [ "React", "React, CSS, Express.js, Node.js, Nodemailer API", "C++"]
 }
 
 const Projects = () => {

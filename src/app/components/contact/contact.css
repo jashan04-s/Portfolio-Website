@@ -121,3 +121,38 @@ input:-webkit-autofill{
     margin-block: 1.5rem;
 }
 
+@media only screen and (max-width:  1024px){
+    .contact__LottieMail{
+        display: none;
+    }
+
+    .contact__form{
+        padding-inline: 5%;
+    }
+
+    .contact__header--font{
+        font-size: 2rem;
+    }
+
+    .contact__intro--font{
+        font-size: 1.5rem;
+    }
+
+    .contact__form--font{
+        font-size: 1rem;
+    }
+
+    #name, #email{
+        height: 2rem;
+        width: 100%;
+    }
+    
+    #message{
+        height: 10rem;
+        width: 100%;
+    }
+
+    input[type=text], textarea{
+        font-size: 1rem;
+    }
+}
