@@ -2,20 +2,24 @@ import React, {useState, useEffect} from "react";
 import "./projects.css";
 
 import GoogleMapsClone from "../../../assets/projectimages/googlemapsclone.png";
-import Kraya from "../../../assets/projectimages/kraya.png";
+import Kraya from "../../../assets/projectimages/Kraya.png";
 import PortfolioWebsite from "../../../assets/projectimages/portfoliowebsite.png";
+import DE1SoCGame from "../../../assets/projectimages/DE1SoCGame.png";
+import ColorizeImagesAI from "../../../assets/projectimages/ColorizeImagesAI.png";
 
 import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons/bs';
 
-const ProjectList = ["./portfoliowebsite.png","./googlemapsclone.png", "./kraya.png"]
-const ImageList = [ PortfolioWebsite, GoogleMapsClone, Kraya]
+const ProjectList = ["./portfoliowebsite.png","./googlemapsclone.png", "Kraya.png", "./DE1SoCGame.png", "./ColorizeImagesAI.png"]
+const ImageList = [ PortfolioWebsite, GoogleMapsClone, Kraya, DE1SoCGame, ColorizeImagesAI]
 const ProjectInfo = {
-  name: [ "Kraya", "Portfolio Website", "GoogleMapsClone"],
-  text: [ "random text for krayBuilt a responsive landing page with HTML, CSS, and JavaScript, closely aligning with Figma designs and collaborating with a Git-based team.", 
+  name: [ "Colorizing Images with GAN", "Portfolio Website", "GoogleMapsClone", "Kraya", "2D Game Clone on DE1-SoC Board"],
+  text: [ "Developed a U-Net-based cGAN using PyTorch to colorize grayscale images from the Kaggle dataset, incorporating recommended loss functions, utilizing CUDA cores, and optimizing with a pre-trained ResNet-34 as the encoder to address training time and GPU memory constraints.", 
   "Crafted a sleek MERN portfolio with AWS S3, MongoDB, GSAP animations, and Nodemailer for user interaction.", 
   "Developed a feature-rich C++ Google Maps clone using OpenStreetMap API, applying Dijkstra's and A* algorithms, addressing memory leaks with Valgrind, and implementing multi-threading for a significant reduction in query time",
+  "Built a responsive landing page with HTML, CSS, and JavaScript, closely aligning with Figma designs and collaborating with a Git-based team.",
+  "Recreated a 2D game clone on the DE1-SoC board using C, implementing pixel buffers for off-screen rendering, 2D sprites for game levels, and secure integration of PS2 keyboard inputs for user control." 
   ],
-  skills: [ "React", "React, CSS, Express.js, Node.js, Nodemailer API", "C++"]
+  skills: [ "Python, PyTorch, Numpy", "React, CSS, Express.js, Node.js, Nodemailer API", "C++, Glade, Valgrind", "HTML, CSS, Javascript","C"]
 }
 
 const Projects = () => {
@@ -44,21 +48,6 @@ const Projects = () => {
 
     console.log(projectDisplayUrl)
   }
-
-  const displayLastProject = () => {
-    if(projectIndex == 0){
-      setProjectIndex(ProjectList.length - 1)
-    }
-    else{
-      setProjectIndex(projectIndex - 1)
-    }
-
-    setProjectDisplayUrl({
-      backgroundImage: 'url(' + ProjectList[projectIndex] + ')'
-    })
-  }
-
-
 
   return (
     <div className="projects" id="projects">
@@ -93,11 +82,6 @@ const Projects = () => {
           </div>
           <div className = "grid__navigation">
             <div className = "navigation__arrow"> 
-                
-                    <div className = "arrow__left">
-                        <BsFillArrowLeftCircleFill size= {48} color = "var(--primary-color)" onClick = {displayLastProject}/>
-                    </div>
-                
                 <div className = "arrow__right">
                     <BsFillArrowRightCircleFill size= {48} color = "var(--primary-color)" onClick = {displayNextProject}/>
                 </div>
