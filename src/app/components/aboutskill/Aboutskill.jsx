@@ -43,11 +43,29 @@ const displayNextPage = (currentSkill, forward = true) => {
 
 
 
+const SkillDescription =  {
+  "html": "As a web developer at Kraya, I utilized HTML to construct a responsive landing page for the company's website.",
+  "css": "I utilized CSS to style GTK widgets for my Google Maps clone, as well as in the development of my portfolio website and during my tenure in web development at KrayaDotShop Pvt. Ltd.",
+  "javascript": "I applied JavaScript proficiently at Kraya and within frameworks such as React and Node.js during the construction of my website.",
+  "react": "I employed React extensively in the development of my portfolio website.",
+  "tailwindCSS" : "I recently learned Tailwind CSS, my first CSS framework, and I intend to leverage this skill in my future projects.",
+  "nextjs": "I recently learned Next JS, my first CSS framework, and I intend to leverage this skill in my future projects.",
+  "mysql": "I implemented a movie ticket booking system using Python-SQL connectivity, performing CRUD operations.",
+  "node": "I utilized Node.js in the development of portfolio website,for storing user feedback in MongoDB, managing a mailing list, and sending emails.",
+  "c++": "In the creation of a Google Maps clone, I employed C++ to integrate the OpenStreetMap API, implement algorithms such as Dijkstra's and A* for pathfinding, and address memory leaks with Valgrind.",
+  "c": "For the development of a 2D game clone on the DE1-SoC board, I utilized C to recreate the game, implementing pixel buffers for off-screen rendering, incorporating 2D sprites for game levels.",
+  "python": "I employed Python for both a movie ticket booking application, incorporating GUI and backend functionalities with Python-SQL connectivity, and a machine learning project, where I built a U-Net-based cGAN using PyTorch, Numpy, and CUDA cores for efficient data processing.",
+  "matlab": "I employed MATLAB for diverse engineering labs and a specific project modeling Messi's free kick against Liverpool in the UCL 2019, demonstrating its versatile application in both academic and practical engineering contexts.",
+  "webpack": "Module bundler I use for all my web development projects",
+  "verilog": "I employed Verilog to design a simple processor based on the ARM instruction set, showcasing its versatility in addition to its use in various other engineering labs.",
+  "git": "I used github as version control software to store my code and work in teams with other developers"
+}
+
 const Aboutskill = () => {
   
   const navigate = useNavigate();
   const { SkillName } = useParams();
-
+  
   console.log(SkillName)
   return (
     <>
@@ -62,8 +80,8 @@ const Aboutskill = () => {
           </div>
           <div className = "about__information">
           <div className = "about__header"> {SkillName} </div>
-          <div className = "about__content">
-          She literature discovered increasing how diminution understood. Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World mrs and vexed china since after often.
+            <div className = "about__content">
+              {SkillDescription[SkillName]}
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import PortfolioWebsite from "../../../assets/projectimages/portfoliowebsite.png
 import DE1SoCGame from "../../../assets/projectimages/DE1SoCGame.png";
 import ColorizeImagesAI from "../../../assets/projectimages/ColorizeImagesAI.png";
 
-import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons/bs';
+import {BsFillArrowRightCircleFill} from 'react-icons/bs';
 
 const ProjectList = ["./portfoliowebsite.png","./googlemapsclone.png", "Kraya.png", "./DE1SoCGame.png", "./ColorizeImagesAI.png"]
 const ImageList = [ PortfolioWebsite, GoogleMapsClone, Kraya, DE1SoCGame, ColorizeImagesAI]
