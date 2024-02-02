@@ -19,7 +19,9 @@ const ProjectInfo = {
   "Built a responsive landing page with HTML, CSS, and JavaScript, closely aligning with Figma designs and collaborating with a Git-based team.",
   "Recreated a 2D game clone on the DE1-SoC board using C, implementing pixel buffers for off-screen rendering, 2D sprites for game levels, and secure integration of PS2 keyboard inputs for user control." 
   ],
-  skills: [ "Python, PyTorch, Numpy", "React, CSS, Express.js, Node.js, Nodemailer API", "C++, Glade, Valgrind", "HTML, CSS, Javascript","C"]
+  skills: [ "Python, PyTorch, Numpy", "React, CSS, Express.js, Node.js, Nodemailer API", "C++, Glade, Valgrind", "HTML, CSS, Javascript","C"],
+  urlCode: [],
+  urlDemo: []
 }
 
 const Projects = () => {

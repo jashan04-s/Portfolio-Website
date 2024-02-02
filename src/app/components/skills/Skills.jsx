@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useLayoutEffect, useRef} from "react";
 import "./skills.css";
 
+import gsap from "gsap";
+import {ScrollTrigger} from  "gsap/ScrollTrigger"
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 
@@ -66,19 +68,48 @@ const Skills = () => {
   const OtherIcons = ["c++", "c", "python", "matlab", "verilog"]
   const ToolIcons = ["webpack", "git"]
 
+  
+  gsap.registerPlugin(ScrollTrigger);
+
+  let comp = useRef(null)
+    
+    useLayoutEffect(() => {
+      const timeline1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".skills",
+          start: "top top",
+          snap: {
+            snapTo: ".skills",
+            duration: { min: 0.2, max: 3 },
+            delay: 0.9,
+            ease: "power1.inOut",
+          },
+        },
+      });
+  
+      timeline1.to(".skills", {
+        opacity: 1, 
+        y: "+=30",
+        stagger: 0.9
+      }, comp);
+    })
+  
+
   return (
-    <div className = "skill_section" id="skills">
-      <div className="skill__header skill__header--font">My Skills</div>
-      <div className="skill__header__text skill__header__text--font">
-        Click on each icon to see my experience with each tool / programming
-        language.
-      </div>
-      <div className="skills__container">
-        <div className="skills skills--font">
-          <DisplaySkills skillType = "frontend" skillIcons = {FrontendIcons} />
-          <DisplaySkills skillType = "backend" skillIcons = {BackendIcons} />
-          <DisplaySkills skillType = "tools" skillIcons = {ToolIcons} />
-          <DisplaySkills skillType = "other" skillIcons = {OtherIcons} />
+    <div className = "gsap--encloser" ref = {comp}>
+      <div className = "skill_section" id="skills">
+        <div className="skill__header skill__header--font">My Skills</div>
+        <div className="skill__header__text skill__header__text--font">
+          Click on each icon to see my experience with each tool / programming
+          language.
+        </div>
+        <div className="skills__container">
+          <div className="skills skills--font">
+            <DisplaySkills className = "frontend" skillType = "frontend" skillIcons = {FrontendIcons} />
+            <DisplaySkills className = "backend" skillType = "backend" skillIcons = {BackendIcons} />
+            <DisplaySkills className = "tools" skillType = "tools" skillIcons = {ToolIcons} />
+            <DisplaySkills className = "other" skillType = "other" skillIcons = {OtherIcons} />
+          </div>
         </div>
       </div>
     </div>

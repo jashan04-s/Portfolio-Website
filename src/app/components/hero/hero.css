@@ -2,6 +2,12 @@
     color: var(--text-color);
 }
 
+.hero__welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color)
+}
 .hero__header--font{
     font-family: var(--header-font);
     font-size: 4rem;

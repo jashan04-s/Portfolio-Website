@@ -4,12 +4,16 @@
     margin-top: 2rem;
     
 }
+
+.gsap--encloser{
+    position: relative;
+}
 .skills{
     width: 90%;
     border-radius: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
+    opacity: 0;
     grid-gap: 1.5rem;
 }
 

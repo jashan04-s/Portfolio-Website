@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, {useEffect } from "react";
 import {PropTypes } from "prop-types";
+
 
 import "./navbar.css";
 import star from "../../../assets/navbarstar.png";
@@ -71,6 +72,8 @@ const Navbar = () => {
   const [isMenuOpen, setMenuState] = React.useState(false);
   const [currentSection, setCurrentSection] = React.useState('home');
   
+
+
   let activeSectionStyle = {
     home: {},
     skills: {},
@@ -97,8 +100,6 @@ const Navbar = () => {
     })
   }
 
-  
-
   useEffect(()=>{
     window.addEventListener('scroll', activeSection)
 
@@ -107,9 +108,14 @@ const Navbar = () => {
     }
   })
 
+  
+
+  
   return (
+    
+    
     <div className="navbar navbar--background">
-      <NavbarLogo />
+      <NavbarLogo className = "navbar--logo"/>
       <div className="navbar__right navbar__right--font">
         <div className="navbar__right-links">
           <Menu className="navbar__right__menu" activeSectionStyle = {activeSectionStyle}/>
