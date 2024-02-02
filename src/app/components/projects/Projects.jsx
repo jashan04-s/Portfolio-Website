@@ -2,14 +2,14 @@ import React, {useState, useEffect} from "react";
 import "./projects.css";
 
 import GoogleMapsClone from "../../../assets/projectimages/googlemapsclone.png";
-import Kraya from "../../../assets/projectimages/Kraya.png";
+import Kraya from "../../../assets/projectimages/kraya.png";
 import PortfolioWebsite from "../../../assets/projectimages/portfoliowebsite.png";
 import DE1SoCGame from "../../../assets/projectimages/DE1SoCGame.png";
 import ColorizeImagesAI from "../../../assets/projectimages/ColorizeImagesAI.png";
 
 import {BsFillArrowRightCircleFill} from 'react-icons/bs';
 
-const ProjectList = ["./portfoliowebsite.png","./googlemapsclone.png", "Kraya.png", "./DE1SoCGame.png", "./ColorizeImagesAI.png"]
+const ProjectList = ["./portfoliowebsite.png","./googlemapsclone.png", "./kraya.png", "./DE1SoCGame.png", "./ColorizeImagesAI.png"]
 const ImageList = [ PortfolioWebsite, GoogleMapsClone, Kraya, DE1SoCGame, ColorizeImagesAI]
 const ProjectInfo = {
   name: [ "Colorizing Images with GAN", "Portfolio Website", "GoogleMapsClone", "Kraya", "2D Game Clone on DE1-SoC Board"],
