@@ -20,8 +20,8 @@ const ProjectInfo = {
   "Recreated a 2D game clone on the DE1-SoC board using C, implementing pixel buffers for off-screen rendering, 2D sprites for game levels, and secure integration of PS2 keyboard inputs for user control." 
   ],
   skills: [ "Python, PyTorch, Numpy", "React, CSS, Express.js, Node.js, Nodemailer API", "C++, Glade, Valgrind", "HTML, CSS, Javascript","C"],
-  urlCode: [],
-  urlDemo: []
+  urlCode: [ "https://github.com/jashan04-s/APS360_Project", "https://github.com/jashan04-s/Portfolio-Website", "./error", "https://github.com/jashan04-s/kraya-website", "https://github.com/jashan04-s/ECE243-Final_Project"],
+  urlDemo: [ "https://autocolorization-aps360.streamlit.app", "https://main.dravjozo4ipw2.amplifyapp.com", "./error", "https://kraya-website.vercel.app/", "./error"]
 }
 
 const Projects = () => {
@@ -38,9 +38,7 @@ const Projects = () => {
       setProjectIndex(0);
     }
     else{
-      console.log(projectIndex)
       setProjectIndex(projectIndex + 1)
-      console.log(projectIndex)
     }
     
     
@@ -49,6 +47,14 @@ const Projects = () => {
     })
 
     console.log(projectDisplayUrl)
+  }
+
+  const showProjectGithub = () => {
+    window.open(ProjectInfo.urlCode[projectIndex], '_blank');
+  }
+
+  const showProjectDemo = () => {
+    window.open(ProjectInfo.urlDemo[projectIndex], '_blank');
   }
 
   return (
@@ -65,21 +71,18 @@ const Projects = () => {
               {ProjectInfo.text[projectIndex]}
             </div>
             <div className = "description__button">
-                <button> Visit Website </button>
-                <button> Code </button>  
+                <button onClick = {showProjectDemo}> Visit Website </button>
+                <button onClick = {showProjectGithub}> Code </button>
             </div>
           </div>
         </div>
         <div className="project__slider">
           <div className="slider__grid">
             <div className="grid__one">
-              <img src={ImageList[(projectIndex) % (ProjectList.length)]} width="300" />
+              <img src={ImageList[(projectIndex) % (ProjectList.length)]}  />
             </div>
             <div className="grid__two">
-              <img src={ImageList[(projectIndex + 1) % (ProjectList.length)]} width="300" />
-            </div>
-            <div className="grid__three">
-              <img src={ImageList[(projectIndex + 2) % (ProjectList.length)]} width="300" />
+              <img src={ImageList[(projectIndex + 1) % (ProjectList.length)]} />
             </div>
           </div>
           <div className = "grid__navigation">

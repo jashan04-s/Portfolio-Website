@@ -6,7 +6,7 @@ const ErrorPage = () => {
   
     return (
       <div className = "error_page">
-        ERROR INNIT
+        This page is not available.
       </div>
     )
   }

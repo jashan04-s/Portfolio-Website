@@ -16,6 +16,8 @@
     display: flex;
     background-image: url("../../../assets/projectimages/portfoliowebsite.png");
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     height: 700px;
     color: var(--text-color);
 }
@@ -58,9 +60,8 @@
 }
 
 .slider__grid > * {
-    justify-content: flex-end;
+    justify-content: center;
     margin-inline: 1%;
-    box-shadow: 10px 5px 5px var(--secondary-color);
 }
 
 .project__content > * {
@@ -83,3 +84,69 @@
     margin-inline: 1%;
 }
 
+.grid__one,.grid__two{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid__one > img, .grid__two > img{
+    width: 300px;
+    height: 175px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1024px){
+    .projects__header--font{
+        font-size: 2.5rem;
+    }
+
+    .project__name{
+        font-size: 3rem;
+    }
+
+    .project__description{
+        font-size: 1rem;
+    }
+    
+    .grid__two > img{
+        display: none;
+    }
+    .description__button > button {
+        font-size: 1.25rem;
+    }
+
+    .grid__one > img{
+        width: 225px;
+        height: 130px;
+        object-fit: cover;
+    }
+
+    .project__content{
+        background-image: none;
+    }
+
+    .project__slider{
+        justify-content: center;
+        margin-bottom: 0;
+    }
+}
+
+
+@media only screen and (max-width: 650px){
+    .grid__one{
+        display: none;
+    }
+
+    .project__slider{
+        justify-content: center;
+    }
+
+    .project__container{
+        flex-basis: 70%;
+    }
+
+    .project__slide{
+        margin-right: 2.5%;
+    }
+}

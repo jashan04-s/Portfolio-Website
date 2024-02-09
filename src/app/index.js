@@ -21,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/about/:SkillName",
     element: <AboutSkill/>,
+  },
+  {
+    path: "*",
+    element: <ErrorPage/>
   }
 ]);
 

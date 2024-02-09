@@ -76,7 +76,7 @@ const Skills = () => {
     useLayoutEffect(() => {
       const timeline1 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".skills",
+          trigger: ".skill__header",
           start: "top top",
           snap: {
             snapTo: ".skills",
