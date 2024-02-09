@@ -1,7 +1,6 @@
 let path = require("path")
 let express = require("express")
-
-
+let nodeoutlook = require('nodejs-nodemailer-outlook');
 const dotenv = require('dotenv')
 dotenv.config()
 
@@ -10,47 +9,26 @@ const PORT = process.env.PORT || 5000
 
 const app = express()
 
-
-
-
 app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.urlencoded({extended : true}))
 
-app.use(express.json()); 
-
-
-
-app.post('/feedback', (req, res) =>{
-  const {email, name} = req.body;
-
-  const userData = {
-    userName: name,
-    emailAddress: email,
-    status: 'pending'
-  }
-
-  let nodeoutlook = require('nodejs-nodemailer-outlook')
+app.post('/mail', (req, res) => {
+  console.log(req.body)
+  const {email, user} = req.body;
+ 
   nodeoutlook.sendEmail({
-    auth: {
-        user: process.env.NODEMAILER_USER,
-        pass: process.env.NODEMAILER_PASS
+    auth:{
+      user: process.env.NODEMAILER_USER,
+      pass: process.env.NODEMAILER_PASS
     },
-    from: 'portfolio.gurjashan@outlook.com',
-    to: 'gurjashan0513@gmail.com',
+    from: process.env.NODEMAILER_USER,
+    to: email,
     subject: 'Thank You For the Feedback!',
-    html: "<div>Thank you for taking the time to share your insights on my portfolio website.<div>Thanks,</div>Gurjashan Singh</div>",
-    text: 'This is text version!',
-    onError: (e) => console.log(e),
-    onSuccess: (i) => console.log(i)
-}
-);
-  if(email){
-    // create additional page
-  }
-  else{
-    res.status(404).send({message: 'Failed'})
+    html: "<div> Hi " + user + ",</div><div>Thank you for taking the time to share your insights on my portfolio website.<div>Thanks,</div>Gurjashan Singh</div>",      
+    onError: (e) =>  res.status(200).send("Failed, well looks like you might have to add this issue to the feedback form that doesn't work"),
+    onSuccess: (i) => res.status(200).send("Success, thanks for providing feedback!")
+  })
 
-  }
-  res.json({ message: 'POST request handled successfully'});
 })
 
 app.listen(PORT, console.log("Server is up and running..."))

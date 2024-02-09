@@ -4,7 +4,6 @@ import "./contact.css";
 import Lottie from "lottie-react";
 import animationData from "../../../assets/lottieEmail.json";
 
-import phoneIcon from "../../../assets/contactphone.png";
 import mailIcon from "../../../assets/contactmail.png";
 
 const Contact = () => {
@@ -26,29 +25,7 @@ const Contact = () => {
       emailInput.setCustomValidity(''); // Clear any previous custom validation message
     } else {
       emailInput.setCustomValidity('Please enter a valid email address.');
-    }
-    
-  }
-
-
-  const handleForm = (event) =>  {
-    event.preventDefault();
-
-    let fetchData = {
-      method: 'POST',
-      body: JSON.stringify({email: userEmail, name: userName}),
-      headers: {"Content-Type":"application/json"}
-    }
-    
-    
-    fetch('/feedback', fetchData).then(res=>{
-      if(res.ok){
-        // nice
-      }
-      else{
-        console.error("Error in storing data!")
-      }
-    })
+    } 
   }
 
   return (
@@ -60,30 +37,30 @@ const Contact = () => {
         opportunities and collaborations.
       </div>
       <div className="contact__form contact__form--font">
-        <form onSubmit = {handleForm}>
+        <form autoComplete = "false" action = "/mail" method = "POST">
           <div className="form__name form--positioner">
             <label htmlFor="name" className="form__label">
               {" "}
               Your Name{" "}
             </label>
-            <input type="text" id="name" maxLength="32" placeholder = " your name" onChange={handleNameChange}/>
+            <input name = "user" type="text" id="name" maxLength="32" placeholder = " your name" onChange={handleNameChange}/>
           </div>
           <div className="form__email  form--positioner">
             <label htmlFor="email" className="form__label">
               {" "}
               Your Email{" "}
             </label>
-            <input type="text" id="email" maxLength="32" placeholder = " your email" onChange={handleEmailChange}/>
+            <input name = "email" type="text" id="email" maxLength="32" placeholder = " your email" onChange={handleEmailChange}/>
           </div>
           <div className="form__message  form--positioner">
             <label htmlFor="message" className="form__label">
               {" "}
               Your Message{" "}
             </label>
-            <textarea id="message" maxLength="500" row="10" col="50" />
+            <textarea name = "feedback" id="message" maxLength="500" row="10" col="50" />
           </div>
           <div className="form__submit form--positioner ">
-            <button type="submit"> Send </button>
+            <input type="submit" value = "Send"/>
           </div>
         </form>
         <div className="contact__LottieMail">
