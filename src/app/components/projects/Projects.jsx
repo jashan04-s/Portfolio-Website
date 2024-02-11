@@ -1,5 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import "./projects.css";
+import gsap from 'gsap';
+
 
 import GoogleMapsClone from "../../../assets/projectimages/googlemapsclone.png";
 import Kraya from "../../../assets/projectimages/kraya.png";
@@ -34,19 +36,26 @@ const Projects = () => {
 
   const displayNextProject = () => {
     
-    if(projectIndex == ProjectList.length - 1){
-      setProjectIndex(0);
-    }
-    else{
-      setProjectIndex(projectIndex + 1)
+    let nextProjectIndex  = 0;
+    if(projectIndex != ProjectList.length - 1){
+      nextProjectIndex = projectIndex + 1;
     }
     
     
-    setProjectDisplayUrl({
-      backgroundImage: 'url(' + ProjectList[projectIndex] + ')'
-    })
+    
+   
 
-    console.log(projectDisplayUrl)
+    gsap.fromTo('.project__content', { opacity: 1 }, { opacity: 0, duration: 0.5, onComplete: () => {
+      // Once animation completes, update projectIndex and projectDisplayUrl
+      setProjectIndex(nextProjectIndex);
+      setProjectDisplayUrl({
+        backgroundImage: 'url(' + ProjectList[nextProjectIndex] + ')'
+      });
+  
+      // Animate the slide re-entry
+      gsap.fromTo('.project__content', { opacity: 0 }, { opacity: 1, duration: 0.5 });
+    }});
+    
   }
 
   const showProjectGithub = () => {
@@ -79,10 +88,10 @@ const Projects = () => {
         <div className="project__slider">
           <div className="slider__grid">
             <div className="grid__one">
-              <img src={ImageList[(projectIndex) % (ProjectList.length)]}  />
+              <img src={ImageList[(projectIndex + 1) % (ProjectList.length)]}  />
             </div>
             <div className="grid__two">
-              <img src={ImageList[(projectIndex + 1) % (ProjectList.length)]} />
+              <img src={ImageList[(projectIndex + 2) % (ProjectList.length)]} />
             </div>
           </div>
           <div className = "grid__navigation">
