@@ -11,7 +11,7 @@ import ColorizeImagesAI from "../../../assets/projectimages/ColorizeImagesAI.png
 
 import {BsFillArrowRightCircleFill} from 'react-icons/bs';
 
-const ProjectList = ["./portfoliowebsite.png","./googlemapsclone.png", "./kraya.png", "./DE1SoCGame.png", "./ColorizeImagesAI.png"]
+const ProjectList = ["./ColorizeImagesAI.png","./portfoliowebsite.png","./googlemapsclone.png", "./kraya.png", "./DE1SoCGame.png"]
 const ImageList = [ PortfolioWebsite, GoogleMapsClone, Kraya, DE1SoCGame, ColorizeImagesAI]
 const ProjectInfo = {
   name: [ "Colorizing Images with GAN", "Portfolio Website", "GoogleMapsClone", "Kraya", "2D Game Clone on DE1-SoC Board"],
@@ -30,20 +30,28 @@ const Projects = () => {
   let [projectIndex, setProjectIndex] = useState(1);
   let [projectDisplayUrl, setProjectDisplayUrl] = 
   useState(
-    {backgroundImage: 'url(' + ProjectList[0] + ')'}
+    {backgroundImage: 'url(' + ProjectList[1] + ')'}
   );
 
-
+  let count = false;
   const displayNextProject = () => {
     
-    let nextProjectIndex  = 0;
-    if(projectIndex != ProjectList.length - 1){
+    let nextProjectIndex = 0;
+
+    if(!count){
+      count = true;
+      nextProjectIndex = projectIndex;
+    }
+
+    if(count && projectIndex != ProjectList.length - 1){
       nextProjectIndex = projectIndex + 1;
+    }
+    else{
+      nextProjectIndex = 0;
     }
     
     
-    
-   
+   console.log(nextProjectIndex)
 
     gsap.fromTo('.project__content', { opacity: 1 }, { opacity: 0, duration: 0.5, onComplete: () => {
       // Once animation completes, update projectIndex and projectDisplayUrl
@@ -88,10 +96,10 @@ const Projects = () => {
         <div className="project__slider">
           <div className="slider__grid">
             <div className="grid__one">
-              <img src={ImageList[(projectIndex + 1) % (ProjectList.length)]}  />
+              <img src={ImageList[(projectIndex) % (ProjectList.length)]}  />
             </div>
             <div className="grid__two">
-              <img src={ImageList[(projectIndex + 2) % (ProjectList.length)]} />
+              <img src={ImageList[(projectIndex + 1) % (ProjectList.length)]} />
             </div>
           </div>
           <div className = "grid__navigation">
