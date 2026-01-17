@@ -6,7 +6,7 @@ const SRC_DIR = path.resolve(__dirname, "src");
 
 module.exports = {
     mode: "development",
-    entry: SRC_DIR + "/app/index.js",
+    entry: SRC_DIR + "/app/index.tsx",
     output: {
         path: DIST_DIR,
         filename: "bundle.js",
@@ -17,11 +17,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "Portfolio Website",
             filename: "index.html",
-            template: "src/template.html"
+            template: "src/index.html"
         })
     ],
     module: {
-        rules:[
+        rules: [
             {
                 test: /\.(svg|png)$/i,
                 type: "asset/resource",
@@ -32,13 +32,18 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ["style-loader","css-loader"],
+                use: ["style-loader", "css-loader"],
                 exclude: /node_modules/
+            },
+            {
+                test: /\.(ts|tsx)$/,
+                exclude: /node_modules/,
+                use: "ts-loader",
             },
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use:{
+                use: {
                     loader: "babel-loader",
                     options: {
                         presets: ["@babel/preset-env", "@babel/preset-react"]

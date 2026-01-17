@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-:root{
-    --text-font: "Abel", sans-serif;
-    --header-font: "Rubik",sans-serif;
 
-    --linear-bg: linear-gradient(90deg, rgba(2, 0, 7, 1) 30%, rgba(159, 102, 205, 1) 100%);;
-    
+:root {
+    --text-font: "Abel", sans-serif;
+    --header-font: "Rubik", sans-serif;
+
+    --linear-bg: linear-gradient(90deg, rgba(2, 0, 7, 1) 30%, rgba(159, 102, 205, 1) 100%);
+    ;
+
     --text-color: #e8dff1;
     --primary-color: #9a71c1;
     --secondary-color: #120b19;
     --accent-color: #7949a7;
     --background-color: #000000;
-    --contact-background-color: rgba(255,255,255,0.05);
+    --contact-background-color: rgba(255, 255, 255, 0.05);
 
     --project-grid-primary-color: #040205;
     --project-grid-secondary-color: #17111D;
@@ -24,5 +26,4 @@
     --logo-translate-y: 8%;
 
     --project-background: url("../assets/projectimages/portfoliowebsite.png")
-    
 }

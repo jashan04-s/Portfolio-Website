@@ -2,9 +2,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import {Resume, AboutSkill, ErrorPage} from "./components";
+import { Resume, AboutSkill, ErrorPage } from "./components";
 
-import "./index.css" ;
+import "./index.css";
 
 import App from "./App";
 
@@ -20,18 +20,25 @@ const router = createBrowserRouter([
   },
   {
     path: "/about/:SkillName",
-    element: <AboutSkill/>,
+    element: <AboutSkill />,
   },
   {
     path: "*",
-    element: <ErrorPage/>
+    element: <ErrorPage />
   }
 ]);
 
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const rootNode = document.getElementById("root");
+
+if (!rootNode) {
+ throw new Error("Root node not present in index.html.")
+}
+
+const root = ReactDOM.createRoot(rootNode);
+
 root.render(
   <React.StrictMode>
-    <RouterProvider router = {router} />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
