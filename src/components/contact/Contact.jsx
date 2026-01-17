@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import "./contact.css";
 
 import Lottie from "lottie-react";
-import animationData from "../../../assets/lottieEmail.json";
+import animationData from "../../assets/lottieEmail.json";
 
-import mailIcon from "../../../assets/contactmail.png";
+import mailIcon from "../../assets/contactmail.png";
 
 const Contact = () => {
   const [userEmail, setUserEmail] = useState('')

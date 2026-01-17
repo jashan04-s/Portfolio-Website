@@ -15,7 +15,7 @@ function importAll(r) {
 }
 
 const icons = importAll(
-  require.context("../../../assets/skillicons", false, /\.(png)$/)
+  require.context("../../assets/skillicons", false, /\.(png)$/)
 );
 
 const DisplayIcons = ({skillType, skillIcon}) =>{

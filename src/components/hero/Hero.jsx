@@ -3,11 +3,11 @@ import "./hero.css" ;
 
 import gsap from "gsap";
 import Lottie from 'lottie-react';
-import animationData from '../../../assets/lottieLaptop.json';
+import animationData from '../../assets/lottieLaptop.json';
 
-import linkedinIcon from '../../../assets/linkedinicon.png';
-import githubIcon from '../../../assets/githubicon.png';
-import emailIcon from '../../../assets/emailicon.png';
+import linkedinIcon from '../../assets/linkedinicon.png';
+import githubIcon from '../../assets/githubicon.png';
+import emailIcon from '../../assets/emailicon.png';
 
 import {Link} from "react-router-dom";
 

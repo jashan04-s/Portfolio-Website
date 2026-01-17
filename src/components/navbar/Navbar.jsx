@@ -3,7 +3,7 @@ import {PropTypes } from "prop-types";
 
 
 import "./navbar.css";
-import star from "../../../assets/navbarstar.png";
+import star from "../../assets/navbarstar.png";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 
 const Menu = ({activeSectionStyle}) => {

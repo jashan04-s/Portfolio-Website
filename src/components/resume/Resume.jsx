@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 import "./resume.css" ;
 
-import resumePDF from "../../../assets/other/GurjashanSinghResume.pdf"
+import resumePDF from "../../assets/other/GurjashanSinghResume.pdf"
 
 
 
