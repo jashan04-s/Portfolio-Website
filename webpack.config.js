@@ -6,7 +6,7 @@ const SRC_DIR = path.resolve(__dirname, "src");
 
 module.exports = {
     mode: "development",
-    entry: SRC_DIR + "/app/index.js",
+    entry: SRC_DIR + "/index.js",
     output: {
         path: DIST_DIR,
         filename: "bundle.js",

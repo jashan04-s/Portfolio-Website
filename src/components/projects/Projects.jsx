@@ -3,11 +3,11 @@ import "./projects.css";
 import gsap from 'gsap';
 
 
-import GoogleMapsClone from "../../../assets/projectimages/googlemapsclone.png";
-import Kraya from "../../../assets/projectimages/kraya.png";
-import PortfolioWebsite from "../../../assets/projectimages/portfoliowebsite.png";
-import DE1SoCGame from "../../../assets/projectimages/DE1SoCGame.png";
-import ColorizeImagesAI from "../../../assets/projectimages/ColorizeImagesAI.png";
+import GoogleMapsClone from "../../assets/projectimages/googlemapsclone.png";
+import Kraya from "../../assets/projectimages/kraya.png";
+import PortfolioWebsite from "../../assets/projectimages/portfoliowebsite.png";
+import DE1SoCGame from "../../assets/projectimages/DE1SoCGame.png";
+import ColorizeImagesAI from "../../assets/projectimages/ColorizeImagesAI.png";
 
 import {BsFillArrowRightCircleFill} from 'react-icons/bs';
 

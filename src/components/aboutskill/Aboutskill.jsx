@@ -13,7 +13,7 @@ function importAll(r) {
 }
 
 const icons = importAll(
-  require.context("../../../assets/skillicons", false, /\.(png)$/)
+  require.context("../../assets/skillicons", false, /\.(png)$/)
 );
 
 const SkillsList = ["html","css","javascript", "react", "tailwindCSS", "nextjs", "mysql", "node", "c++", "c", "python", "matlab", "verilog", "webpack", "git"]
