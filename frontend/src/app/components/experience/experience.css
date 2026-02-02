@@ -1,7 +1,7 @@
 .experience__header{
     display: flex;
     justify-content: center;
-    margin-block: 10%;
+    margin-block: 5%;
 }
 
 .experience__header--font{
@@ -13,10 +13,10 @@
 }
 
 .experience__content{
-    margin-block: 7.5%;
+    margin-block: 3%;
     background-color: var(--secondary-color);
     margin-inline: 5%;
-    border-radius: 20px; 
+    border-radius: 20px;
     display: flex;
     padding: 5%;
 }
@@ -31,6 +31,22 @@
     font-size: 3rem;
     font-weight: bold;
 }
+
+.internship__company{
+    font-family: var(--header-font);
+    font-size: 2.5rem;
+    margin-top: 1%;
+}
+
+.internship__info--left{
+    padding-right: 1%;
+}
+
+.internship__info--right{
+    padding-left: 2.5%;
+    margin-left: 1%;
+}
+
 .internship__date{
     margin-top: 5%;
     font-size: 2rem;
@@ -42,7 +58,6 @@
 .internship__description{
     font-size: 1.5rem;
     flex-basis: 40%;
-    margin-inline: 5%;
 }
 
 .description__bullet--style{
@@ -50,6 +65,32 @@
     color: var(--primary-color);
     font-weight: bold;
     font-size: 3rem;
+}
+
+.internship__description > div {
+  transition: all 0.25s ease;
+}
+
+.internship__description > div:hover {
+  background: rgba(179, 140, 255, 0.06);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.role--primary {
+  background: linear-gradient(
+    135deg,
+    rgba(70, 20, 169, 0.12),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+.role--secondary {
+  background: linear-gradient(
+    315deg,
+    rgba(70, 20, 169, 0.12),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 
@@ -80,4 +121,23 @@
     .experience__header{
         font-size: 2rem;
     }
+}
+
+.internship__description {
+  position: relative;
+  padding-left: 40px;
+}
+
+.internship__description::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(179, 140, 255, 0.6),
+    rgba(179, 140, 255, 0.05)
+  );
 }
