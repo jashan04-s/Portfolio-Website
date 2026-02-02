@@ -2,25 +2,19 @@
     display: flex;
     justify-content: center;
     margin-top: 2rem;
-    
 }
 
-.gsap--encloser{
-    position: relative;
-}
 .skills{
     width: 90%;
     border-radius: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    opacity: 0;
     grid-gap: 1.5rem;
 }
 
 .skills--font{
     font-family: var(--text-font);
     font-size: 3rem;
-    
 }
 
 .skills > * {
@@ -28,7 +22,7 @@
 }
 
 .skills > * > img{
-    display:block;
+    display: block;
 }
 
 .skill__frontend{

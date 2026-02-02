@@ -13,5 +13,5 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["webpack-env"]
   },
-  "include": ["src"]
+  "include": ["src", "src/*.d.ts"]
 }
